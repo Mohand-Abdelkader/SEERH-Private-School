@@ -1,7 +1,7 @@
 import { Button } from "./Button";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-
+import logo from "../../public/SEERAH Logo.png"
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,7 +42,7 @@ function Navbar() {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <img 
-              src="/public/SEERAH Logo.png" 
+              src={logo}
               alt="SEERH School Logo" 
               className="h-12 mr-3" 
             />
