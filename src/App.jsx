@@ -1,7 +1,7 @@
 function App() {
   return (
     <>
-      <h1>hello from React</h1>
+      <h1>hello from edit  React</h1>
     </>
   );
 }
