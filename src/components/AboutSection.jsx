@@ -1,27 +1,34 @@
 function AboutSection() {
   return (
-    <section id="about" className="py-24 bg-white mt-2.5">
+    <section id="about" className="py-24 bg-white mt-2.5 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        {/* Section header with improved styling */}
+        <div className="max-w-4xl mx-auto text-center mb-16 relative">
+          <span className="text-sm font-bold text-[#ef7822] uppercase tracking-wider mb-2 block">Discover Our Story</span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0d4c83]">
             About Our School
           </h2>
           <div className="w-24 h-1 bg-[#ef7822] mx-auto mb-8"></div>
-          <p className="text-[#606060] text-lg mb-6">
+          <p className="text-[#606060] text-lg mb-6 leading-relaxed">
             Founded in 1995, our school has been dedicated to providing
             exceptional education that focuses on academic excellence, character
             development, and nurturing each student's unique talents.
           </p>
-          <p className="text-[#606060] text-lg">
+          <p className="text-[#606060] text-lg leading-relaxed">
             We believe in creating a supportive community where students feel
             empowered to explore, question, and grow into responsible global
             citizens.
           </p>
+          
+          {/* Decorative elements */}
+          <div className="hidden md:block absolute -top-10 -left-16 w-32 h-32 bg-[#ef7822]/5 rounded-full"></div>
+          <div className="hidden md:block absolute -bottom-10 -right-16 w-24 h-24 bg-[#0d4c83]/5 rounded-full"></div>
         </div>
 
+        {/* Feature cards with hover effects */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-[#f8f9fa] p-8 rounded-lg text-center shadow-sm border border-gray-100">
-            <div className="bg-[#0d4c83]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="bg-[#f8f9fa] p-8 rounded-lg text-center shadow-sm border border-gray-100 hover:shadow-md hover:border-[#0d4c83]/20 transition-all duration-300 group">
+            <div className="bg-[#0d4c83]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#0d4c83]/20 transition-colors">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-8 w-8 text-[#0d4c83]"
@@ -31,15 +38,15 @@ function AboutSection() {
                 <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
               </svg>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-[#0d4c83]">Academic Excellence</h3>
-            <p className="text-[#606060]">
+            <h3 className="text-xl font-bold mb-3 text-[#0d4c83] group-hover:text-[#ef7822] transition-colors">Academic Excellence</h3>
+            <p className="text-[#606060] group-hover:text-[#404040] transition-colors">
               Our curriculum is designed to challenge students and help them
-              reach their full academic potential.
+              reach their full academic potential through innovative teaching methods.
             </p>
           </div>
 
-          <div className="bg-[#f8f9fa] p-8 rounded-lg text-center shadow-sm border border-gray-100">
-            <div className="bg-[#0d4c83]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="bg-[#f8f9fa] p-8 rounded-lg text-center shadow-sm border border-gray-100 hover:shadow-md hover:border-[#0d4c83]/20 transition-all duration-300 group">
+            <div className="bg-[#0d4c83]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#0d4c83]/20 transition-colors">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-8 w-8 text-[#0d4c83]"
@@ -53,15 +60,15 @@ function AboutSection() {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-[#0d4c83]">Character Development</h3>
-            <p className="text-[#606060]">
+            <h3 className="text-xl font-bold mb-3 text-[#0d4c83] group-hover:text-[#ef7822] transition-colors">Character Development</h3>
+            <p className="text-[#606060] group-hover:text-[#404040] transition-colors">
               We emphasize values such as integrity, respect, and responsibility
-              in all aspects of school life.
+              in all aspects of school life to build future leaders.
             </p>
           </div>
 
-          <div className="bg-[#f8f9fa] p-8 rounded-lg text-center shadow-sm border border-gray-100">
-            <div className="bg-[#0d4c83]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="bg-[#f8f9fa] p-8 rounded-lg text-center shadow-sm border border-gray-100 hover:shadow-md hover:border-[#0d4c83]/20 transition-all duration-300 group">
+            <div className="bg-[#0d4c83]/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#0d4c83]/20 transition-colors">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-8 w-8 text-[#0d4c83]"
@@ -80,18 +87,44 @@ function AboutSection() {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-[#0d4c83]">Inclusive Environment</h3>
-            <p className="text-[#606060]">
+            <h3 className="text-xl font-bold mb-3 text-[#0d4c83] group-hover:text-[#ef7822] transition-colors">Inclusive Environment</h3>
+            <p className="text-[#606060] group-hover:text-[#404040] transition-colors">
               We celebrate diversity and create a supportive community where
-              every student feels valued and included.
+              every student feels valued, included, and empowered to succeed.
             </p>
           </div>
         </div>
 
+        {/* Stats section */}
+        <div className="mt-20 mb-16 py-10 px-6 bg-[#f8f9fa] rounded-xl shadow-sm border border-gray-100">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="p-4">
+              <div className="text-4xl font-bold text-[#ef7822] mb-2">28+</div>
+              <p className="text-[#606060] font-medium">Years of Excellence</p>
+            </div>
+            <div className="p-4">
+              <div className="text-4xl font-bold text-[#ef7822] mb-2">95%</div>
+              <p className="text-[#606060] font-medium">College Acceptance</p>
+            </div>
+            <div className="p-4">
+              <div className="text-4xl font-bold text-[#ef7822] mb-2">50+</div>
+              <p className="text-[#606060] font-medium">Extracurricular Activities</p>
+            </div>
+            <div className="p-4">
+              <div className="text-4xl font-bold text-[#ef7822] mb-2">15:1</div>
+              <p className="text-[#606060] font-medium">Student-Teacher Ratio</p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA button with improved styling */}
         <div className="mt-12 text-center">
-          <button className="bg-[#ef7822] hover:bg-[#ef7822]/90 text-white font-medium py-2 px-6 rounded-md transition-colors">
-            <a href="/about">Learn More About Us</a>
-          </button>
+          <a href="/about" className="inline-flex items-center justify-center bg-[#ef7822] hover:bg-[#ef7822]/90 text-white font-medium py-3 px-8 rounded-md transition-all duration-300 hover:shadow-lg group">
+            Learn More About Us
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
         </div>
       </div>
     </section>

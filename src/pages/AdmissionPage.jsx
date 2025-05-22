@@ -1,5 +1,5 @@
 function AdmissionPage() {
-  return <div>Admission Page</div>;
+  return <div  className="h-screen mt-[20rem] text-center">Admission Page</div>;
 }
 
 export default AdmissionPage;

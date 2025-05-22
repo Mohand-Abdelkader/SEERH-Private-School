@@ -4,11 +4,15 @@ import AboutPage from "./pages/AboutPage";
 import AcademicProgramPage from "./pages/AcademicProgramPage";
 import AdmissionPage from "./pages/AdmissionPage";
 import NotFound from "./pages/NotFound";
+import Navbar from "./ui/Navbar";
+import Footer from "./ui/Footer";
 function App() {
   return (
     <>
       <BrowserRouter>
+      <Navbar/>
         <Routes>
+         
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/academic-program" element={<AcademicProgramPage />} />
@@ -16,6 +20,7 @@ function App() {
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </>
   );

@@ -1,5 +1,5 @@
 function AcademicProgramPage() {
-  return <div>Academic Program Page</div>;
+  return <div className="h-screen mt-[20rem] text-center">Academic Program Page</div>;
 }
 
 export default AcademicProgramPage;
