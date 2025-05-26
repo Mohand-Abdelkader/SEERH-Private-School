@@ -4,25 +4,39 @@ import AboutPage from "./pages/AboutPage";
 import AcademicProgramPage from "./pages/AcademicProgramPage";
 import AdmissionPage from "./pages/AdmissionPage";
 import NotFound from "./pages/NotFound";
-import Navbar from "./ui/Navbar";
-import Footer from "./ui/Footer";
+
 import ContactPage from "./pages/ContactPage" 
+import AdminLayout from "./ui/AdminLayout";
+import MainLayout from "./ui/MainLayout";
+import Dashboard from "./pages/admin/Dashboard"
+import AdmissionRequests from "./pages/admin/AdmissionRequests";
 function App() {
   return (
     <>
       <BrowserRouter>
-      <Navbar/>
+   
         <Routes>
-         
+          <Route path="/" element={<MainLayout/>}>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/academic-program" element={<AcademicProgramPage />} />
           <Route path="/admission" element={<AdmissionPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFound />} />
+
+          </Route>
+          <Route path="/admin" element={<AdminLayout/>}>
+          <Route path="/admin" element={<Dashboard />} />
+          <Route path="admission-requests" element={<AdmissionRequests/>}/>
+          </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer/>
+    
+        <Routes>
+
+
+        </Routes>
       </BrowserRouter>
     </>
   );

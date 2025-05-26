@@ -1,6 +1,6 @@
 function ContactForm({handleSubmit}) {
     return (
-        <form onSubmit={handleSubmit} className="space-y-5 h-[100%]">
+        <form onSubmit={handleSubmit} className="space-y-5 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
             <label
