@@ -1,5 +1,4 @@
 import { Button } from "../ui/Button";
-
 function CallToAction() {
     return (
         <section className="py-16 bg-[#f8f9fa]">  {/* Changed from bg-[#0d4c83] to bg-[#f8f9fa] */}

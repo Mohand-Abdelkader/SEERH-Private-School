@@ -1,4 +1,3 @@
-import { CheckCircle, BookOpen, Globe, Music } from "lucide-react";
 
 function ProgramsOverview() {
     return (

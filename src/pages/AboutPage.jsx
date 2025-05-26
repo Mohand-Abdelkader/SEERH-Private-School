@@ -1,13 +1,16 @@
-import { Button } from "../ui/Button";
-import AboutHero from "../components/AboutHero";
 import MissionVision from "../components/MissionVision";
 import History from "../components/History";
 import Values from "../components/Values";
 import CallToAction from "../components/CallToAction";
+import Hero from "../ui/Hero";
 function AboutPage() {
   return (
     <div className="pt-16">
-      <AboutHero />
+      <Hero
+        title="About Our School"
+        paragraph="Building tomorrow's leaders through excellence in education since 1995"
+        url="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+      />
 
       <MissionVision />
 
