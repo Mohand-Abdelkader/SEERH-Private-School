@@ -60,3 +60,21 @@ export async function deleteAdmissionRequest(requestId) {
     throw error;
   }
 }
+
+export async function getAdmissionById(admissionId) {
+  try {
+    const response = await fetch(
+      `${FIREBASE_URL}/admission/${admissionId}.json`
+    );
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch admission request");
+    }
+
+    const data = await response.json();
+    return { id: admissionId, ...data };
+  } catch (error) {
+    console.error("Error fetching admission request:", error);
+    throw error;
+  }
+}

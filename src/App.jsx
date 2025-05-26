@@ -12,6 +12,7 @@ import AdminLayout from "./ui/AdminLayout";
 import MainLayout from "./ui/MainLayout";
 import Dashboard from "./pages/admin/Dashboard";
 import AdmissionRequests from "./pages/admin/AdmissionRequests";
+import AdmissionItem from "./pages/admin/AdmissionItem";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -41,6 +42,11 @@ function App() {
                 path="admission-requests"
                 element={<AdmissionRequests />}
               />
+                           <Route
+                path="admission-requests/:id"
+                element={<AdmissionItem />}
+              />
+              
             </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
