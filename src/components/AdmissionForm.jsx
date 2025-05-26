@@ -186,7 +186,7 @@ function AdmissionForm() {
               {...register("phone", {
                 required: "Phone number is required",
                 pattern: {
-                  value: /^[0-9]{10}$/,
+                  value: /^[0-9+]/,
                   message: "Please enter a valid 10-digit phone number",
                 },
               })}

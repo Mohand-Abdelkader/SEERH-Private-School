@@ -1,46 +1,31 @@
-import { Search, Filter, MoreVertical, CheckCircle, XCircle, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Trash2, Eye } from "lucide-react";
+import { useAdmissionRequests } from "../../hooks/admissionRequest/useAdmission";
+import { useDeleteAdmission } from "../../hooks/admissionRequest/useDeleteAdmission";
+import Loader from "../../ui/Loader";
 
 function AdmissionRequests() {
-  const statusColors = {
-    pending: "bg-yellow-100 text-yellow-800",
-    approved: "bg-green-100 text-green-800",
-    rejected: "bg-red-100 text-red-800",
+  const { admissionRequests, isLoading } = useAdmissionRequests();
+  const { deleteAdmission, isLoading: isDeleting } = useDeleteAdmission();
+
+  const handleDelete = async (id) => {
+    if (window.confirm('Are you sure you want to delete this admission request?')) {
+      try {
+        await deleteAdmission(id);
+      } catch (error) {
+        console.error('Failed to delete admission request:', error);
+      }
+    }
   };
 
-  const mockData = [
-    {
-      id: 1,
-      studentName: "John Doe",
-      grade: "Grade 9",
-      parentName: "Robert Doe",
-      status: "pending",
-      date: "2024-02-20",
-    },
-    // Add more mock data as needed
-  ];
+  if (isLoading || isDeleting) return <Loader />;
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div className="relative flex-1 max-w-md">
-          <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5" />
-          <input
-            type="text"
-            placeholder="Search applications..."
-            className="pl-10 pr-4 py-2 w-full border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0d4c83] focus:border-transparent"
-          />
-        </div>
-        <div className="flex items-center gap-4">
-          <button className="flex items-center gap-2 px-4 py-2 border rounded-lg hover:bg-gray-50 transition-colors">
-            <Filter className="h-5 w-5" />
-            <span>Filter</span>
-          </button>
-          <select className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0d4c83] focus:border-transparent">
-            <option value="all">All Status</option>
-            <option value="pending">Pending</option>
-            <option value="approved">Approved</option>
-            <option value="rejected">Rejected</option>
-          </select>
+      <div className="flex justify-between items-center">
+        <h1 className="text-2xl font-bold text-gray-900">Admission Requests</h1>
+        <div className="text-sm text-gray-500">
+          Total Requests: {admissionRequests?.length || 0}
         </div>
       </div>
 
@@ -59,10 +44,7 @@ function AdmissionRequests() {
                   Parent Name
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Status
-                </th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                  Date
+                  Contact
                 </th>
                 <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                   Actions
@@ -70,40 +52,48 @@ function AdmissionRequests() {
               </tr>
             </thead>
             <tbody className="bg-white divide-y divide-gray-200">
-              {mockData.length > 0 ? (
-                mockData.map((application) => (
-                  <tr key={application.id} className="hover:bg-gray-50">
+              {admissionRequests?.length > 0 ? (
+                admissionRequests.map((request) => (
+                  <tr key={request.id} className="hover:bg-gray-50">
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="text-sm font-medium text-gray-900">
-                        {application.studentName}
+                        {request.studentFirstName} {request.studentLastName}
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        {new Date(request.dateOfBirth).toLocaleDateString()}
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {application.grade}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {application.parentName}
+                      Grade {request.gradeApplying}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap">
-                      <span
-                        className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${statusColors[application.status]}`}
-                      >
-                        {application.status.charAt(0).toUpperCase() + application.status.slice(1)}
-                      </span>
+                      <div className="text-sm font-medium text-gray-900">
+                        {request.parentFirstName} {request.parentLastName}
+                      </div>
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                      {application.date}
+                    <td className="px-6 py-4 whitespace-nowrap">
+                      <div className="text-sm text-gray-900">
+                        {request.email}
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        {request.phone}
+                      </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       <div className="flex items-center gap-2">
-                        <button className="p-1 hover:bg-green-100 rounded-full transition-colors">
-                          <CheckCircle className="h-5 w-5 text-green-600" />
-                        </button>
-                        <button className="p-1 hover:bg-red-100 rounded-full transition-colors">
-                          <XCircle className="h-5 w-5 text-red-600" />
-                        </button>
-                        <button className="p-1 hover:bg-gray-100 rounded-full transition-colors">
-                          <MoreVertical className="h-5 w-5 text-gray-400" />
+                        <Link
+                          to={`/admin/admission-requests/${request.id}`}
+                          className="p-2 text-blue-600 hover:bg-blue-50 rounded-full transition-colors"
+                          title="View Details"
+                        >
+                          <Eye size={20} />
+                        </Link>
+                        <button
+                          onClick={() => handleDelete(request.id)}
+                          className="p-2 text-red-600 hover:bg-red-50 rounded-full transition-colors"
+                          title="Delete Request"
+                        >
+                          <Trash2 size={20} />
                         </button>
                       </div>
                     </td>
@@ -113,7 +103,7 @@ function AdmissionRequests() {
                 <tr>
                   <td
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-center"
-                    colSpan="6"
+                    colSpan="5"
                   >
                     No admission requests found
                   </td>
