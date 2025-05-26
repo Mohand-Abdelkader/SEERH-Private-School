@@ -1,3 +1,4 @@
+import { Button } from "../ui/Button"
 function AdmissionForm({handleSubmit}) {
     return (
         <form onSubmit={handleSubmit} className="space-y-8">

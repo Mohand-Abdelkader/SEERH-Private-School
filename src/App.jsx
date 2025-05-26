@@ -6,6 +6,7 @@ import AdmissionPage from "./pages/AdmissionPage";
 import NotFound from "./pages/NotFound";
 import Navbar from "./ui/Navbar";
 import Footer from "./ui/Footer";
+import ContactPage from "./pages/ContactPage" 
 function App() {
   return (
     <>
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/academic-program" element={<AcademicProgramPage />} />
           <Route path="/admission" element={<AdmissionPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
