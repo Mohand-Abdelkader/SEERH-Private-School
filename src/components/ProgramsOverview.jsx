@@ -4,44 +4,31 @@ function ProgramsOverview() {
         <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-[#0d4c83] mb-12">Our Educational Journey</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-[#f8f9fa] p-8 rounded-lg border border-gray-100">
-              <h3 className="text-2xl font-bold text-[#0d4c83] mb-4">Elementary School</h3>
+              <h3 className="text-2xl font-bold text-[#0d4c83] mb-4">Elementary Stage</h3>
               <p className="text-[#606060] mb-6">
-                Grades 1-6 focus on building strong foundations in core subjects while
-                fostering creativity and critical thinking skills.
+                Our elementary program combines STEAM curriculum with Montessori education,
+                creating an interactive and engaging learning environment for young minds.
               </p>
               <ul className="space-y-2 text-[#606060]">
-                <li>• Core subject mastery</li>
-                <li>• Interactive learning</li>
+                <li>• Hands-on STEAM activities</li>
+                <li>• Montessori learning approach</li>
                 <li>• Character development</li>
-                <li>• Arts and music programs</li>
+                <li>• Interactive learning experiences</li>
               </ul>
             </div>
             <div className="bg-[#f8f9fa] p-8 rounded-lg border border-gray-100">
-              <h3 className="text-2xl font-bold text-[#0d4c83] mb-4">Middle School</h3>
+              <h3 className="text-2xl font-bold text-[#0d4c83] mb-4">Intermediate Stage</h3>
               <p className="text-[#606060] mb-6">
-                Grades 7-9 emphasize academic excellence while supporting students'
-                personal growth and development.
+                Our intermediate program builds on the STEAM foundation while preparing
+                students for advanced academic challenges through our American-accredited curriculum.
               </p>
               <ul className="space-y-2 text-[#606060]">
-                <li>• Advanced mathematics</li>
-                <li>• Science exploration</li>
-                <li>• Language arts</li>
-                <li>• Social studies</li>
-              </ul>
-            </div>
-            <div className="bg-[#f8f9fa] p-8 rounded-lg border border-gray-100">
-              <h3 className="text-2xl font-bold text-[#0d4c83] mb-4">High School</h3>
-              <p className="text-[#606060] mb-6">
-                Grades 10-12 prepare students for higher education through rigorous
-                academics and specialized programs.
-              </p>
-              <ul className="space-y-2 text-[#606060]">
-                <li>• College preparation</li>
-                <li>• Advanced placement courses</li>
-                <li>• Career guidance</li>
-                <li>• Leadership opportunities</li>
+                <li>• Advanced STEAM projects</li>
+                <li>• Scientific exploration</li>
+                <li>• Technology integration</li>
+                <li>• Leadership development</li>
               </ul>
             </div>
           </div>
