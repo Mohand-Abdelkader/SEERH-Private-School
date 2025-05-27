@@ -3,10 +3,7 @@ import { Button } from "../ui/Button";
 import AdmissionForm from "../components/AdmissionForm";
 
 function AdmissionPage() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-  };
+
 
   return (
     <div className="pt-16">
@@ -20,7 +17,7 @@ function AdmissionPage() {
       {/* Application Form */}
       <section className="py-16 bg-[#f8f9fa]">
         <div className="container mx-auto px-4 max-w-4xl">
-          <AdmissionForm handleSubmit={handleSubmit} />
+          <AdmissionForm />
         </div>
       </section>
     </div>

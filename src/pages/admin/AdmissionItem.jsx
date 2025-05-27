@@ -36,6 +36,18 @@ function AdmissionItem() {
                                         {new Date(admission.dateOfBirth).toLocaleDateString()}
                                     </p>
                                 </div>
+                                <div className="border-b border-gray-100 pb-4">
+                                    <p className="text-sm font-medium text-gray-600">Nationality</p>
+                                    <p className="text-base text-gray-900 mt-1">
+                                        {admission.nationality}
+                                    </p>
+                                </div>
+                                <div className="border-b border-gray-100 pb-4">
+                                    <p className="text-sm font-medium text-gray-600">Number of Siblings</p>
+                                    <p className="text-base text-gray-900 mt-1">
+                                        {admission.numberOfSiblings}
+                                    </p>
+                                </div>
                                 <div>
                                     <p className="text-sm font-medium text-gray-600">Grade Applying For</p>
                                     <p className="text-base text-gray-900 mt-1">Grade {admission.gradeApplying}</p>
