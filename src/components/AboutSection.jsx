@@ -1,25 +1,27 @@
+import { useTranslation } from "react-i18next";
+
 function AboutSection() {
+  const { t } = useTranslation();
+
   return (
     <section id="about" className="py-24 bg-white mt-2.5 overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Section header with improved styling */}
         <div className="max-w-4xl mx-auto text-center mb-16 relative">
-          <span className="text-sm font-bold text-[#ef7822] uppercase tracking-wider mb-2 block">Discover Our Story</span>
+          <span className="text-sm font-bold text-[#ef7822] uppercase tracking-wider mb-2 block">
+            {t("about.subtitle")}
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#0d4c83]">
-            About Our School
+            {t("about.title")}
           </h2>
           <div className="w-24 h-1 bg-[#ef7822] mx-auto mb-8"></div>
           <p className="text-[#606060] text-lg mb-6 leading-relaxed">
-            Established in 1990, Seerah Private School has been at the forefront of
-            educational innovation in Jeddah, combining STEAM curriculum with Montessori
-            education to create a unique learning experience.
+            {t("about.description1")}
           </p>
           <p className="text-[#606060] text-lg leading-relaxed">
-            Located in Al-Rawdah District, our American-accredited institution provides
-            a nurturing environment where students thrive through interactive learning
-            and cultural diversity.
+            {t("about.description2")}
           </p>
-          
+
           {/* Decorative elements */}
           <div className="hidden md:block absolute -top-10 -left-16 w-32 h-32 bg-[#ef7822]/5 rounded-full"></div>
           <div className="hidden md:block absolute -bottom-10 -right-16 w-24 h-24 bg-[#0d4c83]/5 rounded-full"></div>
@@ -38,10 +40,11 @@ function AboutSection() {
                 <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
               </svg>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-[#0d4c83] group-hover:text-[#ef7822] transition-colors">STEAM Education</h3>
+            <h3 className="text-xl font-bold mb-3 text-[#0d4c83] group-hover:text-[#ef7822] transition-colors">
+              {t("about.features.steam.title")}
+            </h3>
             <p className="text-[#606060] group-hover:text-[#404040] transition-colors">
-              Our innovative STEAM curriculum integrates with Montessori methods to
-              provide hands-on learning experiences in our state-of-the-art facilities.
+              {t("about.features.steam.description")}
             </p>
           </div>
 
@@ -60,10 +63,11 @@ function AboutSection() {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-[#0d4c83] group-hover:text-[#ef7822] transition-colors">Global Perspective</h3>
+            <h3 className="text-xl font-bold mb-3 text-[#0d4c83] group-hover:text-[#ef7822] transition-colors">
+              {t("about.features.global.title")}
+            </h3>
             <p className="text-[#606060] group-hover:text-[#404040] transition-colors">
-              Our diverse international faculty brings global perspectives to education,
-              fostering cultural awareness and understanding.
+              {t("about.features.global.description")}
             </p>
           </div>
 
@@ -87,10 +91,11 @@ function AboutSection() {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-[#0d4c83] group-hover:text-[#ef7822] transition-colors">Complete Development</h3>
+            <h3 className="text-xl font-bold mb-3 text-[#0d4c83] group-hover:text-[#ef7822] transition-colors">
+              {t("about.features.development.title")}
+            </h3>
             <p className="text-[#606060] group-hover:text-[#404040] transition-colors">
-              Our comprehensive facilities support both academic excellence and physical
-              development through STEAM labs, sports fields, and swimming pool.
+              {t("about.features.development.description")}
             </p>
           </div>
         </div>
@@ -100,29 +105,53 @@ function AboutSection() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="p-4">
               <div className="text-4xl font-bold text-[#ef7822] mb-2">35+</div>
-              <p className="text-[#606060] font-medium">Years of Excellence</p>
+              <p className="text-[#606060] font-medium">
+                {t("about.stats.years")}
+              </p>
             </div>
             <div className="p-4">
               <div className="text-4xl font-bold text-[#ef7822] mb-2">2</div>
-              <p className="text-[#606060] font-medium">Educational Stages</p>
+              <p className="text-[#606060] font-medium">
+                {t("about.stats.stages")}
+              </p>
             </div>
             <div className="p-4">
               <div className="text-4xl font-bold text-[#ef7822] mb-2">5+</div>
-              <p className="text-[#606060] font-medium">Modern Facilities</p>
+              <p className="text-[#606060] font-medium">
+                {t("about.stats.facilities")}
+              </p>
             </div>
             <div className="p-4">
-              <div className="text-4xl font-bold text-[#ef7822] mb-2">Global</div>
-              <p className="text-[#606060] font-medium">Teaching Staff</p>
+              <div className="text-4xl font-bold text-[#ef7822] mb-2">
+                Global
+              </div>
+              <p className="text-[#606060] font-medium">
+                {t("about.stats.staff")}
+              </p>
             </div>
           </div>
         </div>
 
         {/* CTA button with improved styling */}
         <div className="mt-12 text-center">
-          <a href="/about" className="inline-flex items-center justify-center bg-[#ef7822] hover:bg-[#ef7822]/90 text-white font-medium py-3 px-8 rounded-md transition-all duration-300 hover:shadow-lg group">
-            Learn More About Us
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          <a
+            href="/about"
+            className="inline-flex items-center justify-center bg-[#ef7822] hover:bg-[#ef7822]/90 text-white font-medium py-3 px-8 rounded-md transition-all duration-300 hover:shadow-lg group"
+          >
+            {t("about.learn_more")}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              />
             </svg>
           </a>
         </div>
