@@ -6,21 +6,19 @@ function MissionVision() {
             <div className="bg-[#f8f9fa] p-8 rounded-lg border border-gray-100">
               <h2 className="text-2xl font-bold text-[#0d4c83] mb-4">Our Mission</h2>
               <p className="text-[#606060] leading-relaxed">
-                To provide exceptional education that empowers students to become
-                critical thinkers, innovative problem solvers, and compassionate
-                global citizens. We strive to create a nurturing environment where
-                every student can discover their potential and develop the skills
-                needed for lifelong success.
+                To deliver a modern educational program that seamlessly integrates STEAM curriculum with
+                Montessori education principles. We are committed to creating an environment where students
+                from diverse backgrounds can thrive, fostering both academic excellence and personal growth
+                through our American-accredited programs.
               </p>
             </div>
             <div className="bg-[#f8f9fa] p-8 rounded-lg border border-gray-100">
               <h2 className="text-2xl font-bold text-[#0d4c83] mb-4">Our Vision</h2>
               <p className="text-[#606060] leading-relaxed">
-                To be a leading educational institution that inspires excellence,
-                fosters creativity, and shapes future leaders who will make positive
-                contributions to society. We envision a community where diversity is
-                celebrated, innovation is encouraged, and character development is
-                paramount.
+                To be a leading semi-international school that bridges traditional values with progressive
+                education. We envision creating future leaders who are equipped with STEAM skills, cultural
+                awareness, and innovative thinking, supported by our state-of-the-art facilities and diverse
+                teaching staff from various nationalities.
               </p>
             </div>
           </div>

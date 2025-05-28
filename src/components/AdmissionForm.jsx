@@ -28,9 +28,7 @@ function AdmissionForm() {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
       {/* Student Information */}
       <div className="bg-white p-6 rounded-lg shadow-sm">
-        <h2 className="text-2xl font-bold text-[#0d4c83] mb-6">
-          Student Information
-        </h2>
+        <h2 className="text-2xl font-bold text-[#0d4c83] mb-6">Student Information</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -111,6 +109,43 @@ function AdmissionForm() {
             {errors?.gradeApplying?.message && (
               <span className="mt-1 text-sm text-red-600 dark:text-red-400">
                 ❌ {errors.gradeApplying.message}
+              </span>
+            )}
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Nationality
+            </label>
+            <input
+              {...register("nationality", {
+                required: "Nationality is required",
+              })}
+              type="text"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0d4c83] focus:border-transparent"
+            />
+            {errors?.nationality?.message && (
+              <span className="mt-1 text-sm text-red-600 dark:text-red-400">
+                ❌ {errors.nationality.message}
+              </span>
+            )}
+          </div>
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              Number of Siblings
+            </label>
+            <input
+              {...register("numberOfSiblings", {
+                required: "Number of siblings is required",
+                min: { value: 0, message: "Cannot be negative" },
+                valueAsNumber: true,
+              })}
+              type="number"
+              min="0"
+              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0d4c83] focus:border-transparent"
+            />
+            {errors?.numberOfSiblings?.message && (
+              <span className="mt-1 text-sm text-red-600 dark:text-red-400">
+                ❌ {errors.numberOfSiblings.message}
               </span>
             )}
           </div>
@@ -221,19 +256,25 @@ function AdmissionForm() {
 
       {/* Additional Information */}
       <div className="bg-white p-6 rounded-lg shadow-sm">
-        <h2 className="text-2xl font-bold text-[#0d4c83] mb-6">
-          Additional Information
-        </h2>
+        <h2 className="text-2xl font-bold text-[#0d4c83] mb-6">Additional Information</h2>
         <div className="space-y-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Previous School (if any)
+              Previous School
             </label>
             <input
-              {...register("previousSchool")}
+              {...register("previousSchool", {
+                required: "Previous school is required. Type 'None' if no previous school",
+              })}
               type="text"
+              placeholder="Enter school name or type 'None' if no previous school"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0d4c83] focus:border-transparent"
             />
+            {errors?.previousSchool?.message && (
+              <span className="mt-1 text-sm text-red-600 dark:text-red-400">
+                ❌ {errors.previousSchool.message}
+              </span>
+            )}
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">

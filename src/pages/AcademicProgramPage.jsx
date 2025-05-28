@@ -8,7 +8,7 @@ function AcademicProgramPage() {
       <Hero
         url="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
         title="Academic Programs"
-        paragraph="Nurturing excellence through comprehensive education"
+        paragraph="Combining STEAM curriculum with Montessori education for comprehensive learning"
       />
 
       <ProgramsOverview />

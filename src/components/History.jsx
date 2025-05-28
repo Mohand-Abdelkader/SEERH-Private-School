@@ -6,19 +6,17 @@ function History() {
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
               <p className="text-[#606060] leading-relaxed">
-                Founded in 1995, SEERH School began with a vision to provide quality
-                education that would prepare students for the challenges of the
-                future. What started as a small institution with just 50 students
-                has grown into a prestigious educational establishment serving
-                hundreds of families in our community.
+                Established in 1990, Seerah Private School began its journey with a vision to provide
+                a unique educational experience that combines modern teaching methodologies with traditional
+                values. Located in the heart of Jeddah City's Al-Rawdah District, our school has grown to
+                become a beacon of educational excellence in the community.
               </p>
               <p className="text-[#606060] leading-relaxed">
-                Over the years, we have continuously evolved our curriculum,
-                facilities, and teaching methods to meet the changing needs of
-                education while maintaining our core values of excellence,
-                integrity, and innovation. Our commitment to providing a
-                well-rounded education has earned us recognition as one of the
-                region's most respected educational institutions.
+                Over our 35 years of operation, we have continuously evolved our facilities and programs,
+                now featuring advanced science laboratories, STEAM labs, comprehensive sports facilities
+                including indoor and outdoor fields, a multi-purpose gymnasium, and a fully equipped
+                swimming pool. Our commitment to providing a well-rounded education has earned us
+                recognition as an accredited American educational institution.
               </p>
             </div>
           </div>

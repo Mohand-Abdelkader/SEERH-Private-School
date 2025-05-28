@@ -11,10 +11,10 @@ function Curriculum() {
                 <CheckCircle className="h-6 w-6 text-[#0d4c83]" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-[#0d4c83] mb-2">STEM Focus</h3>
+                <h3 className="text-xl font-bold text-[#0d4c83] mb-2">STEAM Education</h3>
                 <p className="text-[#606060]">
-                  Comprehensive programs in Science, Technology, Engineering, and
-                  Mathematics with hands-on learning experiences.
+                  Innovative programs in Science, Technology, Engineering, Arts, and
+                  Mathematics with access to advanced laboratories and interactive STEAM labs.
                 </p>
               </div>
             </div>
@@ -23,10 +23,10 @@ function Curriculum() {
                 <BookOpen className="h-6 w-6 text-[#0d4c83]" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-[#0d4c83] mb-2">Language Arts</h3>
+                <h3 className="text-xl font-bold text-[#0d4c83] mb-2">Montessori Approach</h3>
                 <p className="text-[#606060]">
-                  Strong emphasis on reading, writing, and communication skills through
-                  literature and creative expression.
+                  Interactive learning methodology that encourages hands-on exploration,
+                  creativity, and independent thinking in a structured environment.
                 </p>
               </div>
             </div>
@@ -35,10 +35,10 @@ function Curriculum() {
                 <Globe className="h-6 w-6 text-[#0d4c83]" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-[#0d4c83] mb-2">Global Studies</h3>
+                <h3 className="text-xl font-bold text-[#0d4c83] mb-2">Cultural Diversity</h3>
                 <p className="text-[#606060]">
-                  Cultural awareness and international perspective through social
-                  studies and language programs.
+                  A multicultural learning environment enriched by our diverse
+                  international teaching staff and inclusive educational approach.
                 </p>
               </div>
             </div>
@@ -47,10 +47,10 @@ function Curriculum() {
                 <Music className="h-6 w-6 text-[#0d4c83]" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-[#0d4c83] mb-2">Arts & Music</h3>
+                <h3 className="text-xl font-bold text-[#0d4c83] mb-2">Physical Education</h3>
                 <p className="text-[#606060]">
-                  Rich programs in visual arts, music, and performing arts to nurture
-                  creativity and self-expression.
+                  Comprehensive physical education program utilizing our indoor/outdoor
+                  sports fields, gymnasium, and swimming pool facilities.
                 </p>
               </div>
             </div>
