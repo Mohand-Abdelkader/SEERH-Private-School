@@ -1,10 +1,24 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
-import { Menu, LogOut, Home, Users, Bell, Settings , MessageCircle} from "lucide-react";
+import {
+  Menu,
+  LogOut,
+  Home,
+  Users,
+  Bell,
+  Settings,
+  MessageCircle,
+} from "lucide-react";
 import { useState } from "react";
-
+import { logout } from "../services/servicesApi";
+import { useNavigate } from "react-router-dom";
 function AdminLayout() {
+  const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const location = useLocation();
+  async function handleLogout() {
+    await logout();
+    navigate("/login");
+  }
 
   const isActive = (path) => {
     return location.pathname === path;
@@ -63,7 +77,10 @@ function AdminLayout() {
         </nav>
 
         <div className="border-t border-[#ffffff1a] p-4">
-          <button className="flex items-center gap-2 text-white hover:text-red-400 transition-colors w-full">
+          <button
+            onClick={handleLogout}
+            className="flex items-center gap-2 text-white hover:text-red-400 transition-colors w-full"
+          >
             <LogOut size={20} className="min-w-[20px]" />
             {isSidebarOpen && <span>Logout</span>}
           </button>
