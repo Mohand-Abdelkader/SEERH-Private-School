@@ -1,4 +1,6 @@
 const FIREBASE_URL = "https://seerah-school-default-rtdb.firebaseio.com";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../config/firebase-config";
 
 //FOR ADMISSION API
 export async function createAdmission(admissionData) {
@@ -153,3 +155,20 @@ export async function getMessageById(messageId) {
     throw error;
   }
 }
+
+// login API
+
+export const login = async ({ email, password }) => {
+  const userCredential = await signInWithEmailAndPassword(
+    auth,
+    email,
+    password
+  );
+  return {
+    user: userCredential.user,
+  };
+};
+
+export const logout = async () => {
+  return auth.signOut();
+};

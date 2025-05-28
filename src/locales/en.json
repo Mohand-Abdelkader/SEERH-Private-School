@@ -1,0 +1,314 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "academic_program": "Academic Program",
+    "admission": "Admission",
+    "contact": "Contact"
+  },
+  "language": {
+    "english": "English",
+    "arabic": "Arabic"
+  },
+  "hero": {
+    "slide1": {
+      "title": "Welcome to Seerah Private School",
+      "subtitle": "Combining STEAM curriculum with Montessori education for comprehensive learning excellence."
+    },
+    "slide2": {
+      "title": "Innovation in Education",
+      "subtitle": "Advanced facilities and modern teaching methods for an inspiring learning experience."
+    },
+    "slide3": {
+      "title": "Cultural Diversity & Excellence",
+      "subtitle": "A multicultural environment with international educators fostering global perspectives."
+    },
+    "learn_more": "Learn More",
+    "apply_now": "Apply Now"
+  },
+  "about": {
+    "title": "About Our School",
+    "subtitle": "Discover Our Story",
+    "description1": "Established in 1990, Seerah Private School has been at the forefront of educational innovation in Jeddah, combining STEAM curriculum with Montessori education to create a unique learning experience.",
+    "description2": "Located in Al-Rawdah District, our American-accredited institution provides a nurturing environment where students thrive through interactive learning and cultural diversity.",
+    "features": {
+      "steam": {
+        "title": "STEAM Education",
+        "description": "Our innovative STEAM curriculum integrates with Montessori methods to provide hands-on learning experiences in our state-of-the-art facilities."
+      },
+      "global": {
+        "title": "Global Perspective",
+        "description": "Our diverse international faculty brings global perspectives to education, fostering cultural awareness and understanding."
+      },
+      "development": {
+        "title": "Complete Development",
+        "description": "Our comprehensive facilities support both academic excellence and physical development through STEAM labs, sports fields, and swimming pool."
+      }
+    },
+    "stats": {
+      "years": "Years of Excellence",
+      "stages": "Educational Stages",
+      "facilities": "Modern Facilities",
+      "staff": "Teaching Staff"
+    },
+    "learn_more": "Learn More About Us"
+  },
+  "programs": {
+    "title": "Academic Programs",
+    "subtitle": "Educational Journey",
+    "description": "Our comprehensive academic programs are designed to challenge students at every level, fostering intellectual curiosity and a love of learning that will last a lifetime.",
+    "elementary": {
+      "title": "Elementary Stage",
+      "grades": "Elementary Education",
+      "description": "Our elementary program combines STEAM curriculum with Montessori education, creating an interactive and engaging learning environment that nurtures curiosity and creativity.",
+      "features": [
+        "Interactive STEAM activities",
+        "Montessori learning approach",
+        "Hands-on experiments in science labs",
+        "Physical education in modern facilities"
+      ]
+    },
+    "intermediate": {
+      "title": "Intermediate Stage",
+      "grades": "Intermediate Education",
+      "description": "Our intermediate program builds on the STEAM foundation while preparing students for advanced academic challenges through our American-accredited curriculum.",
+      "features": [
+        "Advanced STEAM projects",
+        "Critical thinking development",
+        "Cultural awareness programs",
+        "Sports and physical activities"
+      ]
+    },
+    "learn_more": "Learn More",
+    "view_all": "View All Programs"
+  },
+  "video": {
+    "title": "See Our School in Action",
+    "subtitle": "Virtual Tour",
+    "description": "Watch our promotional video to get a glimpse of the vibrant learning environment we've created for our students and discover what makes our school special.",
+    "video_title": "Discover SEERH School",
+    "video_subtitle": "Experience our campus, meet our teachers, and see our students in action",
+    "features": {
+      "facilities": {
+        "title": "Modern Facilities",
+        "description": "State-of-the-art classrooms, labs, and recreational spaces designed for optimal learning."
+      },
+      "faculty": {
+        "title": "Expert Faculty",
+        "description": "Dedicated teachers who are passionate about education and student development."
+      },
+      "students": {
+        "title": "Happy Students",
+        "description": "A nurturing environment where students thrive academically, socially, and emotionally."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get In Touch",
+    "description": "Have questions about our programs or admissions process? We're here to help. Reach out to us using the form below or contact us directly.",
+    "info": {
+      "title": "School Information",
+      "location": {
+        "title": "Our Location",
+        "address": "123 Education Street, Academic City, AC 12345, United States"
+      },
+      "phone": {
+        "title": "Call Us",
+        "main": "Main Office: (123) 456-7890",
+        "admissions": "Admissions: (123) 456-7891"
+      },
+      "email": {
+        "title": "Email Us",
+        "info": "info@seerhschool.edu",
+        "admissions": "admissions@seerhschool.edu"
+      }
+    },
+    "hours": {
+      "title": "Office Hours",
+      "weekdays": "Monday - Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "closed": "Closed",
+      "connect": "Connect With Us"
+    },
+    "form": {
+      "title": "Send Us a Message"
+    }
+  },
+  "admission": {
+    "title": "Student Information",
+    "student": {
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "dob": "Date of Birth",
+      "grade": "Grade Applying For",
+      "nationality": "Nationality",
+      "siblings": "Number of Siblings"
+    },
+    "parent": {
+      "title": "Parent/Guardian Information",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "address": "Address"
+    },
+    "additional": {
+      "title": "Additional Information",
+      "previous_school": "Previous School",
+      "previous_school_placeholder": "Enter school name or type 'None' if no previous school",
+      "special_requirements": "Any Special Requirements or Notes"
+    },
+    "submit": "Submit Application",
+    "submitting": "Submitting..."
+  },
+  "cta": {
+    "title": "Join Our Educational Community",
+    "description": "Take the first step towards providing your child with an exceptional educational experience at SEERH School.",
+    "button": "Apply Now"
+  },
+  "contact_form": {
+    "name": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "phone_placeholder": "(123) 456-7890",
+    "subject": "Subject",
+    "subject_options": {
+      "admission": "Admission Inquiry",
+      "program": "Program Information",
+      "visit": "Schedule a Visit",
+      "other": "Other"
+    },
+    "message": "Message",
+    "message_placeholder": "How can we help you?",
+    "privacy": "I agree to the privacy policy and consent to being contacted regarding my inquiry.",
+    "privacy_link": "privacy policy",
+    "send": "Send Message",
+    "sending": "Sending..."
+  },
+  "contact_info": {
+    "title": "Get in Touch",
+    "visit": {
+      "title": "Visit Us",
+      "address": "123 School Street, City, Country"
+    },
+    "call": {
+      "title": "Call Us",
+      "number": "+1 (234) 567-8900"
+    },
+    "email": {
+      "title": "Email Us",
+      "address": "info@seerhschool.com"
+    },
+    "hours": {
+      "title": "Office Hours",
+      "weekdays": "Monday - Friday: 8:00 AM - 4:00 PM",
+      "weekend": "Saturday - Sunday: Closed"
+    }
+  },
+  "curriculum": {
+    "title": "Curriculum Highlights",
+    "features": {
+      "steam": {
+        "title": "STEAM Education",
+        "description": "Innovative programs in Science, Technology, Engineering, Arts, and Mathematics with access to advanced laboratories and interactive STEAM labs."
+      },
+      "montessori": {
+        "title": "Montessori Approach",
+        "description": "Interactive learning methodology that encourages hands-on exploration, creativity, and independent thinking in a structured environment."
+      },
+      "diversity": {
+        "title": "Cultural Diversity",
+        "description": "A multicultural learning environment enriched by our diverse international teaching staff and inclusive educational approach."
+      },
+      "physical": {
+        "title": "Physical Education",
+        "description": "Comprehensive physical education program utilizing our indoor/outdoor sports fields, gymnasium, and swimming pool facilities."
+      }
+    }
+  },
+  "history": {
+    "title": "Our History",
+    "paragraph1": "Established in 1990, Seerah Private School began its journey with a vision to provide a unique educational experience that combines modern teaching methodologies with traditional values. Located in the heart of Jeddah City's Al-Rawdah District, our school has grown to become a beacon of educational excellence in the community.",
+    "paragraph2": "Over our 35 years of operation, we have continuously evolved our facilities and programs, now featuring advanced science laboratories, STEAM labs, comprehensive sports facilities including indoor and outdoor fields, a multi-purpose gymnasium, and a fully equipped swimming pool. Our commitment to providing a well-rounded education has earned us recognition as an accredited American educational institution."
+  },
+  "mission_vision": {
+    "mission": {
+      "title": "Our Mission",
+      "description": "To deliver a modern educational program that seamlessly integrates STEAM curriculum with Montessori education principles. We are committed to creating an environment where students from diverse backgrounds can thrive, fostering both academic excellence and personal growth through our American-accredited programs."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To be a leading semi-international school that bridges traditional values with progressive education. We envision creating future leaders who are equipped with STEAM skills, cultural awareness, and innovative thinking, supported by our state-of-the-art facilities and diverse teaching staff from various nationalities."
+    }
+  },
+  "programs_overview": {
+    "title": "Our Educational Journey",
+    "elementary": {
+      "title": "Elementary Stage",
+      "description": "Our elementary program combines STEAM curriculum with Montessori education, creating an interactive and engaging learning environment for young minds.",
+      "features": [
+        "Hands-on STEAM activities",
+        "Montessori learning approach",
+        "Character development",
+        "Interactive learning experiences"
+      ]
+    },
+    "intermediate": {
+      "title": "Intermediate Stage",
+      "description": "Our intermediate program builds on the STEAM foundation while preparing students for advanced academic challenges through our American-accredited curriculum.",
+      "features": [
+        "Advanced STEAM projects",
+        "Scientific exploration",
+        "Technology integration",
+        "Leadership development"
+      ]
+    }
+  },
+  "values": {
+    "title": "Our Core Values",
+    "innovation": {
+      "title": "Innovation",
+      "description": "Pioneering STEAM education and Montessori methods to create an interactive and engaging learning environment."
+    },
+    "diversity": {
+      "title": "Cultural Diversity",
+      "description": "Embracing diverse perspectives through our international faculty and multicultural learning environment."
+    },
+    "progressive": {
+      "title": "Progressive Education",
+      "description": "Balancing traditional values with modern educational approaches to prepare students for future success."
+    }
+  },
+  "footer": {
+    "about": "Providing quality education and nurturing excellence since 1995.",
+    "quick_links": "Quick Links",
+    "resources": "Resources",
+    "contact_us": "Contact Us",
+    "links": {
+      "home": "Home",
+      "about": "About Us",
+      "academic_program": "Academic Programs",
+      "admission": "Admission",
+      "contact": "Contact"
+    },
+    "resources": {
+      "student_portal": "Student Portal",
+      "parent_portal": "Parent Portal",
+      "faculty_resources": "Faculty Resources",
+      "school_calendar": "School Calendar",
+      "news_events": "News & Events"
+    },
+    "contact": {
+      "address": "123 Education St, School District, City, 12345",
+      "phone": "(123) 456-7890",
+      "email": "info@seerhschool.edu",
+      "newsletter": {
+        "placeholder": "Your email",
+        "subscribe": "Subscribe"
+      }
+    },
+    "copyright": "© {{year}} SEERH School. All rights reserved."
+  }
+}

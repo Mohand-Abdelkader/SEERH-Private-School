@@ -15,6 +15,9 @@ import AdmissionRequests from "./pages/admin/AdmissionRequests";
 import AdmissionItem from "./pages/admin/AdmissionItem";
 import ContactMessage from "./pages/admin/ContactMessage";
 import MessageItem from "./pages/admin/MessageItem";
+import AdminLogin from "./pages/AdminLogin";
+import ProtectedRoute from "./ui/ProtectedRoute";
+import { Toaster } from "react-hot-toast";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -36,9 +39,17 @@ function App() {
               />
               <Route path="/admission" element={<AdmissionPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/login" element={<AdminLogin />} />
               <Route path="*" element={<NotFound />} />
             </Route>
-            <Route path="/admin" element={<AdminLayout />}>
+            <Route
+              path="/admin"
+              element={
+                <ProtectedRoute>
+                  <AdminLayout />
+                </ProtectedRoute>
+              }
+            >
               <Route path="/admin" element={<Dashboard />} />
               <Route
                 path="admission-requests"
@@ -55,6 +66,26 @@ function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
+        <Toaster
+          position="top-center"
+          gutter={12}
+          containerStyle={{ margin: "8px" }}
+          toastOptions={{
+            success: {
+              duration: 3000,
+            },
+            error: {
+              duration: 5000,
+            },
+            style: {
+              fontSize: "16px",
+              maxWidth: "500px",
+              padding: "16px 24px",
+              backgroundColor: "##F9FAFB",
+              color: "##1F2937",
+            },
+          }}
+        />
       </QueryClientProvider>
     </>
   );

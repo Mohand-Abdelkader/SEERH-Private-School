@@ -1,9 +1,11 @@
 import { useForm } from "react-hook-form";
 import { Button } from "../ui/Button";
 import { useCreateAdmission } from "../hooks/admissionRequest/useCreateAdmission";
+import { useTranslation } from "react-i18next";
 
 function AdmissionForm() {
   const { createAdmission, isPending } = useCreateAdmission();
+  const { t } = useTranslation();
   const {
     register,
     handleSubmit,
@@ -13,7 +15,7 @@ function AdmissionForm() {
 
   const onSubmit = async (data) => {
     try {
-      await createAdmission(data,{
+      await createAdmission(data, {
         onSuccess: () => {
           console.log("Admission submitted successfully");
           reset(); // Reset form after successful submission
@@ -28,11 +30,13 @@ function AdmissionForm() {
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
       {/* Student Information */}
       <div className="bg-white p-6 rounded-lg shadow-sm">
-        <h2 className="text-2xl font-bold text-[#0d4c83] mb-6">Student Information</h2>
+        <h2 className="text-2xl font-bold text-[#0d4c83] mb-6">
+          {t("admission.title")}
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              First Name
+              {t("admission.student.first_name")}
             </label>
             <input
               {...register("studentFirstName", {
@@ -53,7 +57,7 @@ function AdmissionForm() {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Last Name
+              {t("admission.student.last_name")}
             </label>
             <input
               {...register("studentLastName", {
@@ -74,7 +78,7 @@ function AdmissionForm() {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Date of Birth
+              {t("admission.student.dob")}
             </label>
             <input
               {...register("dateOfBirth", {
@@ -91,7 +95,7 @@ function AdmissionForm() {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Grade Applying For
+              {t("admission.student.grade")}
             </label>
             <select
               {...register("gradeApplying", {
@@ -114,7 +118,7 @@ function AdmissionForm() {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Nationality
+              {t("admission.student.nationality")}
             </label>
             <input
               {...register("nationality", {
@@ -131,7 +135,7 @@ function AdmissionForm() {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Number of Siblings
+              {t("admission.student.siblings")}
             </label>
             <input
               {...register("numberOfSiblings", {
@@ -155,12 +159,12 @@ function AdmissionForm() {
       {/* Parent/Guardian Information */}
       <div className="bg-white p-6 rounded-lg shadow-sm">
         <h2 className="text-2xl font-bold text-[#0d4c83] mb-6">
-          Parent/Guardian Information
+          {t("admission.parent.title")}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              First Name
+              {t("admission.parent.first_name")}
             </label>
             <input
               {...register("parentFirstName", {
@@ -177,7 +181,7 @@ function AdmissionForm() {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Last Name
+              {t("admission.parent.last_name")}
             </label>
             <input
               {...register("parentLastName", {
@@ -194,7 +198,7 @@ function AdmissionForm() {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Email
+              {t("admission.parent.email")}
             </label>
             <input
               {...register("email", {
@@ -215,7 +219,7 @@ function AdmissionForm() {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Phone Number
+              {t("admission.parent.phone")}
             </label>
             <input
               {...register("phone", {
@@ -236,7 +240,7 @@ function AdmissionForm() {
           </div>
           <div className="md:col-span-2">
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Address
+              {t("admission.parent.address")}
             </label>
             <input
               {...register("address", {
@@ -256,18 +260,23 @@ function AdmissionForm() {
 
       {/* Additional Information */}
       <div className="bg-white p-6 rounded-lg shadow-sm">
-        <h2 className="text-2xl font-bold text-[#0d4c83] mb-6">Additional Information</h2>
+        <h2 className="text-2xl font-bold text-[#0d4c83] mb-6">
+          {t("admission.additional.title")}
+        </h2>
         <div className="space-y-6">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Previous School
+              {t("admission.additional.previous_school")}
             </label>
             <input
               {...register("previousSchool", {
-                required: "Previous school is required. Type 'None' if no previous school",
+                required:
+                  "Previous school is required. Type 'None' if no previous school",
               })}
               type="text"
-              placeholder="Enter school name or type 'None' if no previous school"
+              placeholder={t(
+                "admission.additional.previous_school_placeholder"
+              )}
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0d4c83] focus:border-transparent"
             />
             {errors?.previousSchool?.message && (
@@ -278,7 +287,7 @@ function AdmissionForm() {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Any Special Requirements or Notes
+              {t("admission.additional.special_requirements")}
             </label>
             <textarea
               {...register("specialRequirements")}
@@ -296,7 +305,7 @@ function AdmissionForm() {
           disabled={isPending}
           className="bg-[#0d4c83] hover:bg-[#0d4c83]/90 text-white px-8 py-3 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {isPending ? "Submitting..." : "Submit Application"}
+          {isPending ? t("admission.submitting") : t("admission.submit")}
         </Button>
       </div>
     </form>
