@@ -10,14 +10,14 @@ function AboutSection() {
           </h2>
           <div className="w-24 h-1 bg-[#ef7822] mx-auto mb-8"></div>
           <p className="text-[#606060] text-lg mb-6 leading-relaxed">
-            Founded in 1995, our school has been dedicated to providing
-            exceptional education that focuses on academic excellence, character
-            development, and nurturing each student's unique talents.
+            Established in 1990, Seerah Private School has been at the forefront of
+            educational innovation in Jeddah, combining STEAM curriculum with Montessori
+            education to create a unique learning experience.
           </p>
           <p className="text-[#606060] text-lg leading-relaxed">
-            We believe in creating a supportive community where students feel
-            empowered to explore, question, and grow into responsible global
-            citizens.
+            Located in Al-Rawdah District, our American-accredited institution provides
+            a nurturing environment where students thrive through interactive learning
+            and cultural diversity.
           </p>
           
           {/* Decorative elements */}
@@ -38,10 +38,10 @@ function AboutSection() {
                 <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
               </svg>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-[#0d4c83] group-hover:text-[#ef7822] transition-colors">Academic Excellence</h3>
+            <h3 className="text-xl font-bold mb-3 text-[#0d4c83] group-hover:text-[#ef7822] transition-colors">STEAM Education</h3>
             <p className="text-[#606060] group-hover:text-[#404040] transition-colors">
-              Our curriculum is designed to challenge students and help them
-              reach their full academic potential through innovative teaching methods.
+              Our innovative STEAM curriculum integrates with Montessori methods to
+              provide hands-on learning experiences in our state-of-the-art facilities.
             </p>
           </div>
 
@@ -60,10 +60,10 @@ function AboutSection() {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-[#0d4c83] group-hover:text-[#ef7822] transition-colors">Character Development</h3>
+            <h3 className="text-xl font-bold mb-3 text-[#0d4c83] group-hover:text-[#ef7822] transition-colors">Global Perspective</h3>
             <p className="text-[#606060] group-hover:text-[#404040] transition-colors">
-              We emphasize values such as integrity, respect, and responsibility
-              in all aspects of school life to build future leaders.
+              Our diverse international faculty brings global perspectives to education,
+              fostering cultural awareness and understanding.
             </p>
           </div>
 
@@ -87,10 +87,10 @@ function AboutSection() {
                 />
               </svg>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-[#0d4c83] group-hover:text-[#ef7822] transition-colors">Inclusive Environment</h3>
+            <h3 className="text-xl font-bold mb-3 text-[#0d4c83] group-hover:text-[#ef7822] transition-colors">Complete Development</h3>
             <p className="text-[#606060] group-hover:text-[#404040] transition-colors">
-              We celebrate diversity and create a supportive community where
-              every student feels valued, included, and empowered to succeed.
+              Our comprehensive facilities support both academic excellence and physical
+              development through STEAM labs, sports fields, and swimming pool.
             </p>
           </div>
         </div>
@@ -99,20 +99,20 @@ function AboutSection() {
         <div className="mt-20 mb-16 py-10 px-6 bg-[#f8f9fa] rounded-xl shadow-sm border border-gray-100">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="p-4">
-              <div className="text-4xl font-bold text-[#ef7822] mb-2">28+</div>
+              <div className="text-4xl font-bold text-[#ef7822] mb-2">35+</div>
               <p className="text-[#606060] font-medium">Years of Excellence</p>
             </div>
             <div className="p-4">
-              <div className="text-4xl font-bold text-[#ef7822] mb-2">95%</div>
-              <p className="text-[#606060] font-medium">College Acceptance</p>
+              <div className="text-4xl font-bold text-[#ef7822] mb-2">2</div>
+              <p className="text-[#606060] font-medium">Educational Stages</p>
             </div>
             <div className="p-4">
-              <div className="text-4xl font-bold text-[#ef7822] mb-2">50+</div>
-              <p className="text-[#606060] font-medium">Extracurricular Activities</p>
+              <div className="text-4xl font-bold text-[#ef7822] mb-2">5+</div>
+              <p className="text-[#606060] font-medium">Modern Facilities</p>
             </div>
             <div className="p-4">
-              <div className="text-4xl font-bold text-[#ef7822] mb-2">15:1</div>
-              <p className="text-[#606060] font-medium">Student-Teacher Ratio</p>
+              <div className="text-4xl font-bold text-[#ef7822] mb-2">Global</div>
+              <p className="text-[#606060] font-medium">Teaching Staff</p>
             </div>
           </div>
         </div>

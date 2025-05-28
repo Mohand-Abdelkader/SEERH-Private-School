@@ -13,6 +13,8 @@ import MainLayout from "./ui/MainLayout";
 import Dashboard from "./pages/admin/Dashboard";
 import AdmissionRequests from "./pages/admin/AdmissionRequests";
 import AdmissionItem from "./pages/admin/AdmissionItem";
+import ContactMessage from "./pages/admin/ContactMessage";
+import MessageItem from "./pages/admin/MessageItem";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -42,11 +44,12 @@ function App() {
                 path="admission-requests"
                 element={<AdmissionRequests />}
               />
-                           <Route
+              <Route
                 path="admission-requests/:id"
                 element={<AdmissionItem />}
               />
-              
+              <Route path="messages" element={<ContactMessage />} />
+              <Route path="messages/:id" element={<MessageItem />} />
             </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

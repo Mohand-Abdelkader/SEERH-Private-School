@@ -12,23 +12,23 @@ const slides = [
   {
     id: 1,
     url: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    alt: "School campus main building",
-    title: "Educating Tomorrow's Leaders",
-    subtitle: "Providing quality education and nurturing excellence in a supportive environment."
+    alt: "Seerah Private School campus",
+    title: "Welcome to Seerah Private School",
+    subtitle: "Combining STEAM curriculum with Montessori education for comprehensive learning excellence."
   },
   {
     id: 2,
     url: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    alt: "Students in classroom",
-    title: "Inspiring Academic Excellence",
-    subtitle: "Creating an environment where students thrive and reach their full potential."
+    alt: "Interactive STEAM lab",
+    title: "Innovation in Education",
+    subtitle: "Advanced facilities and modern teaching methods for an inspiring learning experience."
   },
   {
     id: 3,
     url: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
-    alt: "School library",
-    title: "Building Character & Knowledge",
-    subtitle: "Developing well-rounded individuals prepared for future challenges."
+    alt: "Diverse learning environment",
+    title: "Cultural Diversity & Excellence",
+    subtitle: "A multicultural environment with international educators fostering global perspectives."
   },
 ];
 

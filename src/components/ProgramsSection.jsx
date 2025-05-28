@@ -7,34 +7,34 @@ function ProgramsSection() {
   const programs = [
     {
       id: 1,
-      title: "Elementary Education",
-      grades: "Grades K-5",
+      title: "Elementary Stage",
+      grades: "Elementary Education",
       description:
-        "Building a strong foundation through engaging, developmentally appropriate curriculum that fosters curiosity, creativity, and critical thinking skills.",
-      features: ["Phonics-based reading program", "Hands-on math exploration", "Integrated science & social studies", "Arts & music enrichment"],
+        "Our elementary program combines STEAM curriculum with Montessori education, creating an interactive and engaging learning environment that nurtures curiosity and creativity.",
+      features: [
+        "Interactive STEAM activities",
+        "Montessori learning approach",
+        "Hands-on experiments in science labs",
+        "Physical education in modern facilities"
+      ],
       image:
         "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     },
     {
       id: 2,
-      title: "Middle School",
-      grades: "Grades 6-8",
+      title: "Intermediate Stage",
+      grades: "Intermediate Education",
       description:
-        "Supporting academic growth and personal development during critical transitional years with engaging curriculum and supportive guidance.",
-      features: ["Advanced math pathways", "Literature & composition focus", "Laboratory sciences", "Leadership development"],
+        "Our intermediate program builds on the STEAM foundation while preparing students for advanced academic challenges through our American-accredited curriculum.",
+      features: [
+        "Advanced STEAM projects",
+        "Critical thinking development",
+        "Cultural awareness programs",
+        "Sports and physical activities"
+      ],
       image:
         "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      id: 3,
-      title: "High School",
-      grades: "Grades 9-12",
-      description:
-        "Preparing students for college and beyond with rigorous academics, valuable life skills, and opportunities for specialization and exploration.",
-      features: ["College preparatory curriculum", "AP & honors courses", "Career exploration", "Capstone projects"],
-      image:
-        "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    },
+    }
   ];
 
   return (
