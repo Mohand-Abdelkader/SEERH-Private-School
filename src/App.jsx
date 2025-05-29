@@ -18,7 +18,7 @@ import MessageItem from "./pages/admin/MessageItem";
 import AdminLogin from "./pages/AdminLogin";
 import ProtectedRoute from "./ui/ProtectedRoute";
 import { Toaster } from "react-hot-toast";
-
+import ScrollToTop from "./ui/ScrollToTop";
 const queryClient = new QueryClient({
   defaultOptions: {
     staleTime: 0,
@@ -29,6 +29,7 @@ function App() {
     <>
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<MainLayout />}>
               <Route path="/" element={<HomePage />} />

@@ -33,13 +33,13 @@ function Footer() {
               >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a
-                href="#"
+              <Link
+                to="/login"
                 className="bg-white/10 p-2 rounded-full hover:bg-[#ef7822] transition-colors duration-300"
                 aria-label="Twitter"
               >
                 <Twitter className="h-5 w-5" />
-              </a>
+              </Link>
               <a
                 href="#"
                 className="bg-white/10 p-2 rounded-full hover:bg-[#ef7822] transition-colors duration-300"
