@@ -123,7 +123,7 @@ function AboutSection() {
             </div>
             <div className="p-4">
               <div className="text-4xl font-bold text-[#ef7822] mb-2">
-                Global
+                {t("about.stats.staffStatic")}
               </div>
               <p className="text-[#606060] font-medium">
                 {t("about.stats.staff")}
