@@ -8,7 +8,6 @@ import {
 } from "../ui/Carousel.jsx";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
 
 const slides = [
   {
@@ -30,11 +29,6 @@ const slides = [
 
 function HeroSection() {
   const { t, i18n } = useTranslation();
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const handleSlideChange = (index) => {
-    setCurrentSlide(index);
-  };
 
   return (
     <section className="w-full h-[40rem] relative pt-16 mb-1.5">
@@ -45,7 +39,6 @@ function HeroSection() {
           align: "start",
           direction: i18n.dir(),
         }}
-        onSlideChange={handleSlideChange}
       >
         <CarouselContent className="h-[40rem]">
           {slides.map((slide, index) => (
@@ -88,18 +81,6 @@ function HeroSection() {
         </CarouselContent>
         <CarouselPrevious className="left-6 bg-[#0d4c83]/80 hover:bg-[#ef7822] text-white border-none z-20 flex items-center justify-center shadow-lg transition-all duration-300" />
         <CarouselNext className="right-6 bg-[#0d4c83]/80 hover:bg-[#ef7822] text-white border-none z-20 flex items-center justify-center shadow-lg transition-all duration-300" />
-        <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20">
-          <div className="flex space-x-2">
-            {slides.map((_, index) => (
-              <div
-                key={index}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                  index === currentSlide ? "bg-[#ef7822] w-8" : "bg-white/60"
-                }`}
-              />
-            ))}
-          </div>
-        </div>
       </Carousel>
     </section>
   );

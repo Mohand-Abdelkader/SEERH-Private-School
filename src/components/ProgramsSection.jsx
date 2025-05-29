@@ -1,10 +1,12 @@
 import { Button } from "../ui/Button";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { Check, ArrowRight, ChevronRight } from "lucide-react";
 
 function ProgramsSection() {
   const [activeTab, setActiveTab] = useState(1);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === "ar";
 
   const programs = [
     {
@@ -28,7 +30,10 @@ function ProgramsSection() {
   ];
 
   return (
-    <section className="py-24 bg-[#f8f9fa] relative overflow-hidden">
+    <section
+      className="py-24 bg-[#f8f9fa] relative overflow-hidden"
+      dir={isRTL ? "rtl" : "ltr"}
+    >
       {/* Decorative elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#0d4c83]/5 rounded-full -translate-y-1/2 translate-x-1/3"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#ef7822]/5 rounded-full translate-y-1/2 -translate-x-1/3"></div>
@@ -48,7 +53,7 @@ function ProgramsSection() {
         </div>
 
         {/* Program tabs */}
-        <div className="flex flex-wrap justify-center mb-10 space-x-2">
+        <div className="flex flex-wrap justify-center mb-10 gap-2">
           {programs.map((program) => (
             <button
               key={program.id}
@@ -73,14 +78,18 @@ function ProgramsSection() {
                 className="bg-white rounded-xl shadow-lg overflow-hidden mb-16 border border-gray-100"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2">
-                  <div className="h-full">
+                  <div className={`h-full ${isRTL ? "md:order-2" : ""}`}>
                     <img
                       src={program.image}
                       alt={program.title}
                       className="object-cover w-full h-full"
                     />
                   </div>
-                  <div className="p-8 md:p-10 flex flex-col justify-center">
+                  <div
+                    className={`p-8 md:p-10 flex flex-col justify-center ${
+                      isRTL ? "md:order-1" : ""
+                    }`}
+                  >
                     <div className="inline-block px-4 py-1 rounded-full bg-[#0d4c83]/10 text-[#0d4c83] text-sm font-medium mb-4">
                       {program.grades}
                     </div>
@@ -93,24 +102,16 @@ function ProgramsSection() {
 
                     <div className="mb-8">
                       <h4 className="text-lg font-semibold text-[#0d4c83] mb-3">
-                        Program Highlights:
+                        {t("programs.highlights")}:
                       </h4>
                       <ul className="space-y-2">
                         {program.features.map((feature, index) => (
                           <li key={index} className="flex items-start">
-                            <svg
-                              className="h-5 w-5 text-[#ef7822] mr-2 mt-0.5"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              stroke="currentColor"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M5 13l4 4L19 7"
-                              />
-                            </svg>
+                            <Check
+                              className={`h-5 w-5 text-[#ef7822] ${
+                                isRTL ? "ml-2" : "mr-2"
+                              } mt-0.5`}
+                            />
                             <span className="text-[#606060]">{feature}</span>
                           </li>
                         ))}
@@ -120,20 +121,11 @@ function ProgramsSection() {
                     <Button className="bg-[#ef7822] hover:bg-[#ef7822]/90 text-white self-start shadow-sm hover:shadow-md transition-all duration-300">
                       <a href="/academic-program" className="flex items-center">
                         {t("programs.learn_more")}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-4 w-4 ml-2"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"
-                          />
-                        </svg>
+                        <ArrowRight
+                          className={`h-4 w-4 ${
+                            isRTL ? "mr-2 rotate-180" : "ml-2"
+                          }`}
+                        />
                       </a>
                     </Button>
                   </div>
@@ -156,7 +148,11 @@ function ProgramsSection() {
                   className="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[#040706]/80 to-transparent h-24"></div>
-                <div className="absolute bottom-4 left-4">
+                <div
+                  className={`absolute bottom-4 ${
+                    isRTL ? "right-4" : "left-4"
+                  }`}
+                >
                   <span className="inline-block px-3 py-1 bg-white/90 text-[#0d4c83] text-xs font-bold rounded-full">
                     {program.grades}
                   </span>
@@ -174,20 +170,11 @@ function ProgramsSection() {
                 >
                   <a href="/academic-program" className="flex items-center">
                     {t("programs.learn_more")}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-3.5 w-3.5 ml-1.5 transition-transform group-hover:translate-x-0.5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
+                    <ChevronRight
+                      className={`h-3.5 w-3.5 ${
+                        isRTL ? "mr-1.5 rotate-180" : "ml-1.5"
+                      } transition-transform group-hover:translate-x-0.5`}
+                    />
                   </a>
                 </Button>
               </div>
@@ -199,20 +186,9 @@ function ProgramsSection() {
           <Button className="bg-[#0d4c83] hover:bg-[#0d4c83]/90 text-white px-8 py-2.5 shadow-sm hover:shadow-md transition-all duration-300">
             <a href="/academic-program" className="flex items-center">
               {t("programs.view_all")}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 ml-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
+              <ArrowRight
+                className={`h-4 w-4 ${isRTL ? "mr-2 rotate-180" : "ml-2"}`}
+              />
             </a>
           </Button>
         </div>

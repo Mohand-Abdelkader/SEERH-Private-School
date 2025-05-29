@@ -125,7 +125,7 @@ function ContactForm() {
             className="h-4 w-4 text-[#0d4c83] focus:ring-[#0d4c83] border-gray-300 rounded"
           />
         </div>
-        <div className="ml-3 text-sm">
+        <div className="ml-3 mr-3 text-sm">
           <label className="text-gray-700">{t("contact_form.privacy")}</label>
           {errors?.privacy?.message && (
             <span className="mt-1 text-sm text-red-600 dark:text-red-400 block">

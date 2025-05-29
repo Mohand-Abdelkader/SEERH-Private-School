@@ -49,11 +49,13 @@
       "years": "Years of Excellence",
       "stages": "Educational Stages",
       "facilities": "Modern Facilities",
-      "staff": "Teaching Staff"
+      "staff": "Teaching Staff",
+      "staffStatic": "Global"
     },
     "learn_more": "Learn More About Us"
   },
   "programs": {
+    "highlights": "Highlights of Our Program",
     "title": "Academic Programs",
     "subtitle": "Educational Journey",
     "description": "Our comprehensive academic programs are designed to challenge students at every level, fostering intellectual curiosity and a love of learning that will last a lifetime.",
@@ -284,7 +286,7 @@
   "footer": {
     "about": "Providing quality education and nurturing excellence since 1995.",
     "quick_links": "Quick Links",
-    "resources": "Resources",
+    "resourcesfor_students": "Resources",
     "contact_us": "Contact Us",
     "links": {
       "home": "Home",

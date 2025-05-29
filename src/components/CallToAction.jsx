@@ -15,6 +15,7 @@ function CallToAction() {
           <Button
             as="a"
             href="/admission"
+            variant="outline"
             className="bg-white text-[#0d4c83] hover:bg-gray-100 px-8 py-3"
           >
             {t("cta.button")}
