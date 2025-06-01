@@ -86,7 +86,8 @@ function NewsAdmin() {
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                       <div className="flex items-center gap-2">
                         <Link
-                          to={`/admin/news/${item.id}`}
+                          to={`/admin/news/${item.title.en}`}
+                          state={{ news: item }}
                           className="p-2 text-blue-600 hover:bg-blue-50 rounded-full transition-colors"
                           title="View Details"
                         >

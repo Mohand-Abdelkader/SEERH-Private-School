@@ -70,6 +70,7 @@ function App() {
               <Route path="messages/:id" element={<MessageItem />} />
               <Route path="news" element={<NewsAdmin />} />
               <Route path="news/create" element={<CreateNews />} />
+              <Route path="news/:title" element={<NewsItem />} />
             </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

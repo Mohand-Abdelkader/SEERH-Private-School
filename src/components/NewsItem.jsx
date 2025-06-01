@@ -55,25 +55,6 @@ function NewsItem() {
           </div>
         </article>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-white border-t border-gray-100 mt-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <Link
-              to="/news"
-              className="flex items-center gap-2 text-blue-600 hover:text-blue-700 transition-colors"
-            >
-              <ArrowLeft size={20} />
-              <span>{isArabic ? "عرض جميع الأخبار" : "View All News"}</span>
-            </Link>
-            <div className="text-sm text-gray-500">
-              {isArabic ? "مدرسة سيرة الخاصة" : "SEERAH Private School"} ©{" "}
-              {new Date().getFullYear()}
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
