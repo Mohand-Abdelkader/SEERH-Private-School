@@ -269,3 +269,100 @@ export async function deleteNews(newsId) {
     throw error;
   }
 }
+
+// FOR SLIDES API
+export async function getSlides() {
+  try {
+    const response = await fetch(`${FIREBASE_URL}/slides.json`);
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch slides");
+    }
+
+    const data = await response.json();
+    return Object.entries(data || {}).map(([id, slide]) => ({
+      id,
+      ...slide,
+    }));
+  } catch (error) {
+    console.error("Error fetching slides:", error);
+    throw error;
+  }
+}
+
+export async function getSlideById(slideId) {
+  try {
+    const response = await fetch(`${FIREBASE_URL}/slides/${slideId}.json`);
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch slide");
+    }
+
+    const data = await response.json();
+    return { id: slideId, ...data };
+  } catch (error) {
+    console.error("Error fetching slide:", error);
+    throw error;
+  }
+}
+
+export async function createSlide(slideData) {
+  try {
+    const response = await fetch(`${FIREBASE_URL}/slides.json`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(slideData),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to create slide");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error creating slide:", error);
+    throw error;
+  }
+}
+
+export async function updateSlide(slideId, slideData) {
+  try {
+    const response = await fetch(`${FIREBASE_URL}/slides/${slideId}.json`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(slideData),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to update slide");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error updating slide:", error);
+    throw error;
+  }
+}
+
+export async function deleteSlide(slideId) {
+  try {
+    const response = await fetch(`${FIREBASE_URL}/slides/${slideId}.json`, {
+      method: "DELETE",
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to delete slide");
+    }
+
+    return { success: true };
+  } catch (error) {
+    console.error("Error deleting slide:", error);
+    throw error;
+  }
+}
