@@ -366,3 +366,91 @@ export async function deleteSlide(slideId) {
     throw error;
   }
 }
+
+// School Policy
+
+export async function getSchoolPolicy() {
+  try {
+    const response = await fetch(`${FIREBASE_URL}/schoolPolicy.json`);
+
+    if (!response.ok) {
+      throw new Error("Failed to fetch school policy");
+    }
+
+    const data = await response.json();
+    return Object.entries(data || {}).map(([id, policy]) => ({
+      id,
+      ...policy,
+    }));
+  } catch (error) {
+    console.error("Error fetching school policy:", error);
+    throw error;
+  }
+}
+
+export async function createSchoolPolicy(schoolPolicyData) {
+  try {
+    const response = await fetch(`${FIREBASE_URL}/schoolPolicy.json`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(schoolPolicyData),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to create school policy");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error creating school policy:", error);
+    throw error;
+  }
+}
+
+export async function updateSchoolPolicy(policyId, policyData) {
+  try {
+    const response = await fetch(
+      `${FIREBASE_URL}/schoolPolicy/${policyId}.json`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(policyData),
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("Failed to update school policy");
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error updating school policy:", error);
+    throw error;
+  }
+}
+
+export async function deleteSchoolPolicy(schoolPolicyId) {
+  try {
+    const response = await fetch(
+      `${FIREBASE_URL}/schoolPolicy/${schoolPolicyId}.json`,
+      {
+        method: "DELETE",
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error("Failed to delete school policy");
+    }
+
+    return { success: true };
+  } catch (error) {
+    console.error("Error deleting school policy:", error);
+    throw error;
+  }
+}

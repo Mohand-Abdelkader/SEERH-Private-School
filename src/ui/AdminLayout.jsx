@@ -9,6 +9,7 @@ import {
   MessageCircle,
   Newspaper,
   Images,
+  Scale,
 } from "lucide-react";
 import { useState } from "react";
 import { logout } from "../services/servicesApi";
@@ -36,6 +37,7 @@ function AdminLayout() {
     { path: "/admin/messages", label: "Messages", icon: MessageCircle },
     { path: "/admin/news", label: "News", icon: Newspaper },
     { path: "/admin/slides", label: "Slides", icon: Images },
+    { path: "/admin/policy", label: "Policy", icon: Scale },
   ];
 
   return (

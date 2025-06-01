@@ -25,6 +25,9 @@ import CreateNews from "./featuers/news/CreateNews";
 import NewsItem from "./components/NewsItem";
 import SlidesAdmin from "./pages/admin/SlidesAdmin";
 import CreateSlide from "./featuers/slids/CreateSlide";
+import SchoolPolicy from "./pages/SchoolPolicy";
+import PolicyAdmin from "./pages/admin/PolicyAdmin";
+import PolicyForm from "./featuers/policy/PolicyFrom";
 const queryClient = new QueryClient({
   defaultOptions: {
     staleTime: 0,
@@ -49,6 +52,7 @@ function App() {
               <Route path="/login" element={<AdminLogin />} />
               <Route path="/news" element={<NewsPage />} />
               <Route path="/news/:title" element={<NewsItem />} />
+              <Route path="policy" element={<SchoolPolicy />} />
               <Route path="*" element={<NotFound />} />
             </Route>
             <Route
@@ -75,6 +79,9 @@ function App() {
               <Route path="news/:title" element={<NewsItem />} />
               <Route path="slides" element={<SlidesAdmin />} />
               <Route path="slides/create" element={<CreateSlide />} />
+              <Route path="policy" element={<PolicyAdmin />} />
+              <Route path="policy/create" element={<PolicyForm />} />
+              <Route path="policy/edit/:title" element={<PolicyForm />} />
             </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
