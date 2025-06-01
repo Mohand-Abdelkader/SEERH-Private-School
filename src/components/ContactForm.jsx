@@ -1,103 +1,147 @@
 import { useForm } from "react-hook-form";
-import { Button } from "../ui/Button";
-import { useTranslation } from "react-i18next";
+import { useCreateContactMessage } from "../hooks/contactMessage/useCreateMessage";
 
 function ContactForm() {
-  const { t } = useTranslation();
+  const { createContactMessage, isPending } = useCreateContactMessage();
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
-    // Handle form submission
+  const onSubmit = async (data) => {
+    try {
+      await createContactMessage(data, {
+        onSuccess: () => {
+          reset(); // Reset form after successful submission
+        },
+      });
+    } catch (error) {
+      console.error("Failed to send message:", error);
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          {t("contact_form.name")}
-        </label>
-        <input
-          {...register("name", { required: "Name is required" })}
-          type="text"
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0d4c83] focus:border-transparent"
-        />
-        {errors?.name?.message && (
-          <span className="mt-1 text-sm text-red-600 dark:text-red-400">
-            ❌ {errors.name.message}
-          </span>
-        )}
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div>
+          <label
+            htmlFor="name"
+            className="block text-sm font-medium text-[#040706] mb-1"
+          >
+            Full Name <span className="text-red-500">*</span>
+          </label>
+          <input
+            id="name"
+            {...register("name", {
+              required: "Full name is required",
+              minLength: {
+                value: 2,
+                message: "Name must be at least 2 characters",
+              },
+            })}
+            placeholder="John Doe"
+            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0d4c83] focus:border-transparent transition-colors"
+          />
+          {errors?.name?.message && (
+            <span className="mt-1 text-sm text-red-600 dark:text-red-400">
+              ❌ {errors.name.message}
+            </span>
+          )}
+        </div>
+
+        <div>
+          <label
+            htmlFor="email"
+            className="block text-sm font-medium text-[#040706] mb-1"
+          >
+            Email Address <span className="text-red-500">*</span>
+          </label>
+          <input
+            id="email"
+            type="email"
+            {...register("email", {
+              required: "Email is required",
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: "Invalid email address",
+              },
+            })}
+            placeholder="john@example.com"
+            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0d4c83] focus:border-transparent transition-colors"
+          />
+          {errors?.email?.message && (
+            <span className="mt-1 text-sm text-red-600 dark:text-red-400">
+              ❌ {errors.email.message}
+            </span>
+          )}
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div>
+          <label
+            htmlFor="phone"
+            className="block text-sm font-medium text-[#040706] mb-1"
+          >
+            Phone Number
+          </label>
+          <input
+            id="phone"
+            {...register("phone", {
+              pattern: {
+                value: /^[\d\s-+()]*$/,
+                message: "Invalid phone number format",
+              },
+            })}
+            placeholder="(123) 456-7890"
+            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0d4c83] focus:border-transparent transition-colors"
+          />
+          {errors?.phone?.message && (
+            <span className="mt-1 text-sm text-red-600 dark:text-red-400">
+              ❌ {errors.phone.message}
+            </span>
+          )}
+        </div>
+
+        <div>
+          <label
+            htmlFor="subject"
+            className="block text-sm font-medium text-[#040706] mb-1"
+          >
+            Subject <span className="text-red-500">*</span>
+          </label>
+          <select
+            id="subject"
+            {...register("subject", {
+              required: "Please select a subject",
+            })}
+            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0d4c83] focus:border-transparent transition-colors"
+          >
+            <option value="">Select a subject</option>
+            <option value="admission">Admission Inquiry</option>
+            <option value="program">Program Information</option>
+            <option value="visit">Schedule a Visit</option>
+            <option value="other">Other</option>
+          </select>
+          {errors?.subject?.message && (
+            <span className="mt-1 text-sm text-red-600 dark:text-red-400">
+              ❌ {errors.subject.message}
+            </span>
+          )}
+        </div>
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          {t("contact_form.email")}
-        </label>
-        <input
-          {...register("email", {
-            required: "Email is required",
-            pattern: {
-              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: "Invalid email address",
-            },
-          })}
-          type="email"
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0d4c83] focus:border-transparent"
-        />
-        {errors?.email?.message && (
-          <span className="mt-1 text-sm text-red-600 dark:text-red-400">
-            ❌ {errors.email.message}
-          </span>
-        )}
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          {t("contact_form.phone")}
-        </label>
-        <input
-          {...register("phone", {
-            required: "Phone number is required",
-            pattern: {
-              value: /^[0-9+]/,
-              message: "Please enter a valid phone number",
-            },
-          })}
-          type="tel"
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0d4c83] focus:border-transparent"
-        />
-        {errors?.phone?.message && (
-          <span className="mt-1 text-sm text-red-600 dark:text-red-400">
-            ❌ {errors.phone.message}
-          </span>
-        )}
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          {t("contact_form.subject")}
-        </label>
-        <input
-          {...register("subject", { required: "Subject is required" })}
-          type="text"
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0d4c83] focus:border-transparent"
-        />
-        {errors?.subject?.message && (
-          <span className="mt-1 text-sm text-red-600 dark:text-red-400">
-            ❌ {errors.subject.message}
-          </span>
-        )}
-      </div>
-
-      <div>
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          {t("contact_form.message")}
+        <label
+          htmlFor="message"
+          className="block text-sm font-medium text-[#040706] mb-1"
+        >
+          Message <span className="text-red-500">*</span>
         </label>
         <textarea
+          id="message"
           {...register("message", {
             required: "Message is required",
             minLength: {
@@ -105,9 +149,10 @@ function ContactForm() {
               message: "Message must be at least 10 characters",
             },
           })}
-          rows="4"
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#0d4c83] focus:border-transparent"
-        ></textarea>
+          placeholder="How can we help you?"
+          rows={5}
+          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#0d4c83] focus:border-transparent transition-colors"
+        />
         {errors?.message?.message && (
           <span className="mt-1 text-sm text-red-600 dark:text-red-400">
             ❌ {errors.message.message}
@@ -115,32 +160,50 @@ function ContactForm() {
         )}
       </div>
 
-      <div className="flex items-start">
-        <div className="flex items-center h-5">
-          <input
-            {...register("privacy", {
-              required: "You must agree to the privacy policy",
-            })}
-            type="checkbox"
-            className="h-4 w-4 text-[#0d4c83] focus:ring-[#0d4c83] border-gray-300 rounded"
-          />
-        </div>
-        <div className="ml-3 mr-3 text-sm">
-          <label className="text-gray-700">{t("contact_form.privacy")}</label>
-          {errors?.privacy?.message && (
-            <span className="mt-1 text-sm text-red-600 dark:text-red-400 block">
-              ❌ {errors.privacy.message}
-            </span>
-          )}
-        </div>
+      <div className="flex items-center">
+        <input
+          id="privacy"
+          {...register("privacy", {
+            required: "You must accept the privacy policy",
+          })}
+          type="checkbox"
+          className="h-4 w-4 text-[#0d4c83] focus:ring-[#0d4c83] border-gray-300 rounded"
+        />
+        <label htmlFor="privacy" className="ml-2 block text-sm text-[#606060]">
+          I agree to the{" "}
+          <a href="#" className="text-[#0d4c83] hover:underline">
+            privacy policy
+          </a>{" "}
+          and consent to being contacted regarding my inquiry.
+        </label>
+        {errors?.privacy?.message && (
+          <span className="mt-1 text-sm text-red-600 dark:text-red-400">
+            ❌ {errors.privacy.message}
+          </span>
+        )}
       </div>
 
-      <Button
+      <button
         type="submit"
-        className="w-full bg-[#0d4c83] hover:bg-[#0d4c83]/90 text-white"
+        disabled={isPending}
+        className="w-full bg-[#ef7822] hover:bg-[#ef7822]/90 text-white font-medium py-3 px-6 rounded-md transition-all duration-300 flex items-center justify-center hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {t("contact_form.send")}
-      </Button>
+        {isPending ? "Sending..." : "Send Message"}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-5 w-5 ml-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M13 7l5 5m0 0l-5 5m5-5H6"
+          />
+        </svg>
+      </button>
     </form>
   );
 }
