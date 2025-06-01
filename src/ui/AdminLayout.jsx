@@ -7,6 +7,7 @@ import {
   Bell,
   Settings,
   MessageCircle,
+  Newspaper,
 } from "lucide-react";
 import { useState } from "react";
 import { logout } from "../services/servicesApi";
@@ -32,6 +33,7 @@ function AdminLayout() {
       icon: Users,
     },
     { path: "/admin/messages", label: "Messages", icon: MessageCircle },
+    { path: "/admin/news", label: "News", icon: Newspaper },
   ];
 
   return (
@@ -58,7 +60,7 @@ function AdminLayout() {
           </button>
         </div>
 
-        <nav className="mt-6 flex-1">
+        <nav className="flex-1 mt-6">
           {navItems.map((item) => {
             const Icon = item.icon;
             return (
@@ -79,7 +81,7 @@ function AdminLayout() {
         <div className="border-t border-[#ffffff1a] p-4">
           <button
             onClick={handleLogout}
-            className="flex items-center gap-2 text-white hover:text-red-400 transition-colors w-full"
+            className="flex items-center w-full gap-2 text-white transition-colors hover:text-red-400"
           >
             <LogOut size={20} className="min-w-[20px]" />
             {isSidebarOpen && <span>Logout</span>}
@@ -89,16 +91,16 @@ function AdminLayout() {
 
       {/* Main Content */}
       <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100">
-        <div className="sticky top-0 z-10 bg-white border-b border-gray-200 px-6 py-4 flex justify-between items-center">
+        <div className="sticky top-0 z-10 flex items-center justify-between px-6 py-4 bg-white border-b border-gray-200">
           <h1 className="text-xl font-semibold text-gray-800">
             {navItems.find((item) => isActive(item.path))?.label || "Admin"}
           </h1>
           <div className="flex items-center gap-4">
-            <button className="p-2 hover:bg-gray-100 rounded-full relative">
+            <button className="relative p-2 rounded-full hover:bg-gray-100">
               <Bell size={20} />
-              <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+              <span className="absolute w-2 h-2 bg-red-500 rounded-full top-1 right-1"></span>
             </button>
-            <button className="p-2 hover:bg-gray-100 rounded-full">
+            <button className="p-2 rounded-full hover:bg-gray-100">
               <Settings size={20} />
             </button>
           </div>
