@@ -3,6 +3,7 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { QueryClient } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
 
+import WhatsAppButton from "./ui/WhatsApp";
 import NewsPage from "./pages/NewsPage";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
@@ -39,6 +40,12 @@ function App() {
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <ScrollToTop />
+
+          <WhatsAppButton
+            phoneNumber="+966544862844"
+            message="Hello! I'm interested in Seerah School services."
+          />
+
           <Routes>
             <Route path="/" element={<MainLayout />}>
               <Route path="/" element={<HomePage />} />
