@@ -8,6 +8,8 @@ import {
   Settings,
   MessageCircle,
   Newspaper,
+  Images,
+  Scale,
 } from "lucide-react";
 import { useState } from "react";
 import { logout } from "../services/servicesApi";
@@ -34,6 +36,8 @@ function AdminLayout() {
     },
     { path: "/admin/messages", label: "Messages", icon: MessageCircle },
     { path: "/admin/news", label: "News", icon: Newspaper },
+    { path: "/admin/slides", label: "Slides", icon: Images },
+    { path: "/admin/policy", label: "Policy", icon: Scale },
   ];
 
   return (
@@ -95,15 +99,6 @@ function AdminLayout() {
           <h1 className="text-xl font-semibold text-gray-800">
             {navItems.find((item) => isActive(item.path))?.label || "Admin"}
           </h1>
-          <div className="flex items-center gap-4">
-            <button className="relative p-2 rounded-full hover:bg-gray-100">
-              <Bell size={20} />
-              <span className="absolute w-2 h-2 bg-red-500 rounded-full top-1 right-1"></span>
-            </button>
-            <button className="p-2 rounded-full hover:bg-gray-100">
-              <Settings size={20} />
-            </button>
-          </div>
         </div>
         <div className="p-6">
           <Outlet />

@@ -5,7 +5,8 @@
     "academic_program": "Academic Program",
     "admission": "Admission",
     "contact": "Contact",
-    "news": "News"
+    "news": "News",
+    "policy": "Policy"
   },
   "language": {
     "english": "English",
@@ -26,6 +27,10 @@
     },
     "learn_more": "Learn More",
     "apply_now": "Apply Now"
+  },
+  "policy": {
+    "title": "School Policies – Seerah Private School",
+    "description": "Welcome to Seerah Private School’s Policies page. As part of our commitment to transparency, safety, and educational excellence, we have outlined key policies that guide our academic environment, ensure student well-being, and promote a respectful, inclusive school culture"
   },
   "about": {
     "title": "About Our School",
@@ -300,7 +305,7 @@
       "student_portal": "Student Portal",
       "parent_portal": "Parent Portal",
       "faculty_resources": "Faculty Resources",
-      "school_calendar": "School Calendar",
+      "school_policy": "School Policy",
       "news_events": "News "
     },
     "contact": {
