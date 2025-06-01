@@ -4,7 +4,8 @@
     "about": "About",
     "academic_program": "Academic Program",
     "admission": "Admission",
-    "contact": "Contact"
+    "contact": "Contact",
+    "news": "News"
   },
   "language": {
     "english": "English",
@@ -300,7 +301,7 @@
       "parent_portal": "Parent Portal",
       "faculty_resources": "Faculty Resources",
       "school_calendar": "School Calendar",
-      "news_events": "News & Events"
+      "news_events": "News "
     },
     "contact": {
       "address": "123 Education St, School District, City, 12345",

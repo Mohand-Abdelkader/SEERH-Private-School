@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { QueryClient } from "@tanstack/react-query";
+import { Toaster } from "react-hot-toast";
 
+import NewsPage from "./pages/NewsPage";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import AcademicProgramPage from "./pages/AcademicProgramPage";
@@ -17,8 +19,10 @@ import ContactMessage from "./pages/admin/ContactMessage";
 import MessageItem from "./pages/admin/MessageItem";
 import AdminLogin from "./pages/AdminLogin";
 import ProtectedRoute from "./ui/ProtectedRoute";
-import { Toaster } from "react-hot-toast";
 import ScrollToTop from "./ui/ScrollToTop";
+import NewsAdmin from "./pages/admin/NewsAdmin";
+import CreateNews from "./featuers/news/CreateNews";
+import NewsItem from "./components/NewsItem";
 const queryClient = new QueryClient({
   defaultOptions: {
     staleTime: 0,
@@ -41,6 +45,8 @@ function App() {
               <Route path="/admission" element={<AdmissionPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/login" element={<AdminLogin />} />
+              <Route path="/news" element={<NewsPage />} />
+              <Route path="/news/:title" element={<NewsItem />} />
               <Route path="*" element={<NotFound />} />
             </Route>
             <Route
@@ -62,6 +68,9 @@ function App() {
               />
               <Route path="messages" element={<ContactMessage />} />
               <Route path="messages/:id" element={<MessageItem />} />
+              <Route path="news" element={<NewsAdmin />} />
+              <Route path="news/create" element={<CreateNews />} />
+              <Route path="news/:title" element={<NewsItem />} />
             </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

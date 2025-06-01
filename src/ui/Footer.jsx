@@ -146,7 +146,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="/news-events"
+                  to="/news"
                   className="text-gray-200 hover:text-[#ef7822] transition-colors flex items-center"
                 >
                   <ChevronRight className="h-3 w-3 mr-2" />
