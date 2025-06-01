@@ -23,6 +23,8 @@ import ScrollToTop from "./ui/ScrollToTop";
 import NewsAdmin from "./pages/admin/NewsAdmin";
 import CreateNews from "./featuers/news/CreateNews";
 import NewsItem from "./components/NewsItem";
+import SlidesAdmin from "./pages/admin/SlidesAdmin";
+import CreateSlide from "./featuers/slids/CreateSlide";
 const queryClient = new QueryClient({
   defaultOptions: {
     staleTime: 0,
@@ -71,6 +73,8 @@ function App() {
               <Route path="news" element={<NewsAdmin />} />
               <Route path="news/create" element={<CreateNews />} />
               <Route path="news/:title" element={<NewsItem />} />
+              <Route path="slides" element={<SlidesAdmin />} />
+              <Route path="slides/create" element={<CreateSlide />} />
             </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
