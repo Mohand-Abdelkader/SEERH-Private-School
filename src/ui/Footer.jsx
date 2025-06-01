@@ -137,11 +137,11 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="/school-calendar"
+                  to="/policy"
                   className="text-gray-200 hover:text-[#ef7822] transition-colors flex items-center"
                 >
                   <ChevronRight className="h-3 w-3 mr-2" />
-                  {t("footer.resources.school_calendar")}
+                  {t("footer.resources.school_policy")}
                 </Link>
               </li>
               <li>

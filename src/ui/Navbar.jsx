@@ -107,6 +107,16 @@ function Navbar() {
               >
                 {t("nav.news")}
               </Link>
+              <Link
+                to="/policy"
+                className={`font-medium transition-colors relative ${
+                  isActive("/policy")
+                    ? "text-[#ef7822] font-semibold after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-[#ef7822] after:bottom-[-6px] after:left-0"
+                    : "text-[#040706] hover:text-[#ef7822]"
+                }`}
+              >
+                {t("nav.policy")}
+              </Link>
               <Button className="bg-[#ef7822] hover:bg-[#ef7822]/90 text-white shadow-sm hover:shadow-md transition-all">
                 <Link to="/contact" className="flex items-center">
                   <svg

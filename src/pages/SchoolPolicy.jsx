@@ -5,7 +5,7 @@ import { usePolicy } from "../hooks/schoolPolicy/usePolicy";
 import Loader from "../ui/Loader";
 import Hero from "../ui/Hero";
 function SchoolPolicy() {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const [openPolicy, setOpenPolicy] = useState(null);
   const { data: policies, isLoading } = usePolicy();
 
@@ -53,8 +53,8 @@ function SchoolPolicy() {
       {/* Hero Section */}
       <Hero
         url="https://sudden.org/wp-content/uploads/2021/04/SUDDEN-template-73.png"
-        title="School Policies – Seerah Private School"
-        paragraph="Welcome to Seerah Private School’s Policies page. As part of our commitment to transparency, safety, and educational excellence, we have outlined key policies that guide our academic environment, ensure student well-being, and promote a respectful, inclusive school culture"
+        title={t("policy.title")}
+        paragraph={t("policy.description")}
       />
 
       {/* Policies Section */}
