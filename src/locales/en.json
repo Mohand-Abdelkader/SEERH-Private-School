@@ -119,22 +119,18 @@
       "title": "School Information",
       "location": {
         "title": "Our Location",
-        "address": "123 Education Street, Academic City, AC 12345, United States"
+        "address": "alrwadah, Jeddah, Saudi Arabia"
       },
       "phone": {
-        "title": "Call Us",
-        "main": "Main Office: (123) 456-7890",
-        "admissions": "Admissions: (123) 456-7891"
+        "title": "Call Us"
       },
       "email": {
-        "title": "Email Us",
-        "info": "info@seerhschool.edu",
-        "admissions": "admissions@seerhschool.edu"
+        "title": "Email Us"
       }
     },
     "hours": {
       "title": "Office Hours",
-      "weekdays": "Monday - Friday",
+      "weekdays": "Sunday - Thursday",
       "saturday": "Saturday",
       "sunday": "Sunday",
       "closed": "Closed",
@@ -309,9 +305,9 @@
       "news_events": "News "
     },
     "contact": {
-      "address": "123 Education St, School District, City, 12345",
-      "phone": "(123) 456-7890",
-      "email": "info@seerhschool.edu",
+      "address": "alrwadah, Jeddah, Saudi Arabia",
+      "phone": "+966502915613",
+      "email": "mohamd.rashed@seerah.sa",
       "newsletter": {
         "placeholder": "Your email",
         "subscribe": "Subscribe"

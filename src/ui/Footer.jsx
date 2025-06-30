@@ -8,6 +8,7 @@ import {
   MapPin,
   Phone,
   Mail,
+  Linkedin,
 } from "lucide-react";
 
 function Footer() {
@@ -25,27 +26,42 @@ function Footer() {
 
             {/* Rest of the footer content remains the same */}
             <p className="text-gray-200 mb-4">{t("footer.about")}</p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-1">
               <a
-                href="#"
-                className="bg-white/10 p-2 rounded-full hover:bg-[#ef7822] transition-colors duration-300"
-                aria-label="Facebook"
+                href="https://www.facebook.com/seerah.sch.sa/"
+                target="_blank"
+                className="bg-[#0d4c83]/10 p-2 rounded-full hover:bg-white hover:text-[#0d4c83] transition-colors duration-300"
               >
                 <Facebook className="h-5 w-5" />
               </a>
-              <Link
-                to="/login"
-                className="bg-white/10 p-2 rounded-full hover:bg-[#ef7822] transition-colors duration-300"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-5 w-5" />
-              </Link>
+
               <a
-                href="#"
-                className="bg-white/10 p-2 rounded-full hover:bg-[#ef7822] transition-colors duration-300"
-                aria-label="Instagram"
+                target="_blank"
+                href="https://www.instagram.com/sis.schools?igsh=MXBsbjBsdzVrYXd2Zw%3D%3D&utm_source=qr"
+                className="bg-[#0d4c83]/10 p-2 rounded-full  hover:bg-white hover:text-[#0d4c83] transition-colors duration-300"
               >
                 <Instagram className="h-5 w-5" />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/company/101282297/admin/dashboard/"
+                className="bg-[#0d4c83]/10 p-2 rounded-full  hover:bg-white hover:text-[#0d4c83] transition-colors duration-300"
+              >
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a
+                target="_blank"
+                href="https://www.snapchat.com/add/sisschools"
+                className="bg-[#0d4c83]/10 p-2 rounded-full  hover:bg-white hover:text-[#0d4c83] transition-colors duration-300"
+              >
+                <i className="bi bi-snapchat h-5 w-5 font-bold"></i>
+              </a>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/sis.schools?igsh=MXBsbjBsdzVrYXd2Zw%3D%3D&utm_source=qr"
+                className="bg-[#0d4c83]/10 p-2 rounded-full  hover:bg-white hover:text-[#0d4c83] transition-colors duration-300"
+              >
+                <i className="bi bi-tiktok h-5 w-5 font-bold"></i>
               </a>
             </div>
           </div>

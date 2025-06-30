@@ -6,8 +6,8 @@ import {
   Mail,
   Clock,
   Facebook,
-  Twitter,
   Instagram,
+  Linkedin,
 } from "lucide-react";
 
 function ContactSection() {
@@ -70,12 +70,8 @@ function ContactSection() {
                   <h4 className="font-semibold text-[#040706] mb-1">
                     {t("contact.info.phone.title")}
                   </h4>
-                  <p className="text-[#606060]">
-                    {t("contact.info.phone.main")}
-                  </p>
-                  <p className="text-[#606060]">
-                    {t("contact.info.phone.admissions")}
-                  </p>
+
+                  <p className="text-[#606060]">+966 50 291 5613</p>
                 </div>
               </div>
 
@@ -87,12 +83,7 @@ function ContactSection() {
                   <h4 className="font-semibold text-[#040706] mb-1">
                     {t("contact.info.email.title")}
                   </h4>
-                  <p className="text-[#606060]">
-                    {t("contact.info.email.info")}
-                  </p>
-                  <p className="text-[#606060]">
-                    {t("contact.info.email.admissions")}
-                  </p>
+                  <p className="text-[#606060]">mohamd.rashed@seerah.sa</p>
                 </div>
               </div>
             </div>
@@ -115,32 +106,6 @@ function ContactSection() {
                     8:00 AM - 4:00 PM
                   </span>
                 </li>
-                <li className="flex justify-between items-center pb-2 border-b border-gray-50">
-                  <div className="flex items-center">
-                    <div className="bg-[#ef7822]/10 p-2 rounded-full mr-3">
-                      <Clock className="h-4 w-4 text-[#ef7822]" />
-                    </div>
-                    <span className="text-[#606060] font-medium">
-                      {t("contact.hours.saturday")}
-                    </span>
-                  </div>
-                  <span className="text-[#040706] font-semibold">
-                    9:00 AM - 12:00 PM
-                  </span>
-                </li>
-                <li className="flex justify-between items-center">
-                  <div className="flex items-center">
-                    <div className="bg-[#ef7822]/10 p-2 rounded-full mr-3">
-                      <Clock className="h-4 w-4 text-[#ef7822]" />
-                    </div>
-                    <span className="text-[#606060] font-medium">
-                      {t("contact.hours.sunday")}
-                    </span>
-                  </div>
-                  <span className="text-[#040706] font-semibold">
-                    {t("contact.hours.closed")}
-                  </span>
-                </li>
               </ul>
 
               <div className="mt-6 pt-4 border-t border-gray-100">
@@ -149,22 +114,40 @@ function ContactSection() {
                 </h4>
                 <div className="flex space-x-3">
                   <a
-                    href="#"
+                    href="https://www.facebook.com/seerah.sch.sa/"
+                    target="_blank"
                     className="bg-[#0d4c83]/10 p-2 rounded-full hover:bg-[#0d4c83] hover:text-white transition-colors duration-300"
                   >
                     <Facebook className="h-5 w-5" />
                   </a>
+
                   <a
-                    href="#"
-                    className="bg-[#0d4c83]/10 p-2 rounded-full hover:bg-[#0d4c83] hover:text-white transition-colors duration-300"
-                  >
-                    <Twitter className="h-5 w-5" />
-                  </a>
-                  <a
-                    href="#"
+                    target="_blank"
+                    href="https://www.instagram.com/sis.schools?igsh=MXBsbjBsdzVrYXd2Zw%3D%3D&utm_source=qr"
                     className="bg-[#0d4c83]/10 p-2 rounded-full hover:bg-[#0d4c83] hover:text-white transition-colors duration-300"
                   >
                     <Instagram className="h-5 w-5" />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/company/101282297/admin/dashboard/"
+                    className="bg-[#0d4c83]/10 p-2 rounded-full hover:bg-[#0d4c83] hover:text-white transition-colors duration-300"
+                  >
+                    <Linkedin className="h-5 w-5" />
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.snapchat.com/add/sisschools"
+                    className="bg-[#0d4c83]/10 p-2 rounded-full hover:bg-[#0d4c83] hover:text-white transition-colors duration-300"
+                  >
+                    <i class="bi bi-snapchat h-5 w-5 font-bold"></i>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/sis.schools?igsh=MXBsbjBsdzVrYXd2Zw%3D%3D&utm_source=qr"
+                    className="bg-[#0d4c83]/10 p-2 rounded-full hover:bg-[#0d4c83] hover:text-white transition-colors duration-300"
+                  >
+                    <i class="bi bi-tiktok h-5 w-5 font-bold"></i>
                   </a>
                 </div>
               </div>
@@ -184,7 +167,7 @@ function ContactSection() {
         <div className="mt-16 max-w-5xl mx-auto">
           <div className="bg-white p-4 rounded-lg shadow-md border border-gray-100 overflow-hidden">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215151997223!2d-73.98509668459377!3d40.74844097932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1629814463583!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3710.4816943302303!2d39.155777675271544!3d21.56711278022033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDM0JzAxLjYiTiAzOcKwMDknMzAuMSJF!5e0!3m2!1sen!2seg!4v1751291354788!5m2!1sen!2seg"
               width="100%"
               height="400"
               style={{ border: 0 }}

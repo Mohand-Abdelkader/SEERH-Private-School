@@ -42,8 +42,8 @@ function App() {
           <ScrollToTop />
 
           <WhatsAppButton
-            phoneNumber="+966544862844"
-            message="Hello! I'm interested in Seerah School services."
+            phoneNumber="966502915613"
+            message="Hello! I'm interested in your services for Seerah School."
           />
 
           <Routes>
