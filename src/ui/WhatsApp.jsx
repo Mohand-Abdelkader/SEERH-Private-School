@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 function WhatsAppButton({
-  phoneNumber = "966500000000",
+  phoneNumber = "966502915613",
   message = "Hello! I'm interested in your services for Seerah School.",
 }) {
   const encodedMessage = encodeURIComponent(message);

@@ -119,22 +119,18 @@
       "title": "معلومات المدرسة",
       "location": {
         "title": "موقعنا",
-        "address": "123 شارع التعليم، مدينة أكاديمية، AC 12345، الولايات المتحدة"
+        "address": "الرضوى - جده - السعودية"
       },
       "phone": {
-        "title": "اتصل بنا",
-        "main": "المكتب الرئيسي: (123) 456-7890",
-        "admissions": "القبول: (123) 456-7891"
+        "title": "اتصل بنا"
       },
       "email": {
-        "title": "راسلنا",
-        "info": "info@seerhschool.edu",
-        "admissions": "admissions@seerhschool.edu"
+        "title": "راسلنا"
       }
     },
     "hours": {
       "title": "ساعات العمل",
-      "weekdays": "الاثنين - الجمعة",
+      "weekdays": "الاحد - الخميس",
       "saturday": "السبت",
       "sunday": "الأحد",
       "closed": "مغلق",
@@ -309,9 +305,9 @@
       "news_events": "الأخبار "
     },
     "contact": {
-      "address": "123 شارع التعليم، حي المدرسة، المدينة، 12345",
-      "phone": "(123) 456-7890",
-      "email": "info@seerhschool.edu",
+      "address": "الرضوى - جده - السعودية",
+      "phone": "00966502915613",
+      "email": "mohamd.rashed@seerah.sa",
       "newsletter": {
         "placeholder": "بريدك الإلكتروني",
         "subscribe": "اشترك"
