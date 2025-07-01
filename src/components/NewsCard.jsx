@@ -4,7 +4,7 @@ function NewsCard({ news, index, currentLocale }) {
   return (
     <div
       key={index}
-      className="overflow-hidden transition-shadow duration-300 bg-white rounded-lg shadow-lg hover:shadow-xl"
+      className="overflow-hidden w-full bg-white rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-xl"
     >
       <img
         src={news.image}

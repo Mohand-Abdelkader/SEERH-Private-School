@@ -140,14 +140,14 @@ function ContactSection() {
                     href="https://www.snapchat.com/add/sisschools"
                     className="bg-[#0d4c83]/10 p-2 rounded-full hover:bg-[#0d4c83] hover:text-white transition-colors duration-300"
                   >
-                    <i class="bi bi-snapchat h-5 w-5 font-bold"></i>
+                    <i className="bi bi-snapchat h-5 w-5 font-bold"></i>
                   </a>
                   <a
                     target="_blank"
                     href="https://www.instagram.com/sis.schools?igsh=MXBsbjBsdzVrYXd2Zw%3D%3D&utm_source=qr"
                     className="bg-[#0d4c83]/10 p-2 rounded-full hover:bg-[#0d4c83] hover:text-white transition-colors duration-300"
                   >
-                    <i class="bi bi-tiktok h-5 w-5 font-bold"></i>
+                    <i className="bi bi-tiktok h-5 w-5 font-bold"></i>
                   </a>
                 </div>
               </div>
