@@ -30,7 +30,7 @@
   },
   "policy": {
     "title": "School Policies – Seerah Private School",
-    "description": "Welcome to Seerah Private School’s Policies page. As part of our commitment to transparency, safety, and educational excellence, we have outlined key policies that guide our academic environment, ensure student well-being, and promote a respectful, inclusive school culture"
+    "description": "Welcome to Seerah Private School's Policies page. As part of our commitment to transparency, safety, and educational excellence, we have outlined key policies that guide our academic environment, ensure student well-being, and promote a respectful, inclusive school culture"
   },
   "about": {
     "title": "About Our School",
@@ -314,5 +314,11 @@
       }
     },
     "copyright": "© {{year}} SEERH School. All rights reserved."
+  },
+  "news": {
+    "title": "Latest News",
+    "subtitle": "Stay Updated",
+    "description1": "Catch up on the latest news and updates from our school community.",
+    "description2": "Stay informed with the most recent happenings and announcements."
   }
 }
